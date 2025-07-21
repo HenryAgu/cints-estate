@@ -79,21 +79,25 @@ const Footer = () => {
             height={79}
             className="lg:w-[104px] lg:h-[79px] w-16 h-12 mx-auto"
           />
-          <div className={`flex lg:flex-row flex-col lg:gap-x-24.5 gap-y-14 ${HelveticaNeue.className}`}>
+          <div
+            className={`flex lg:flex-row flex-col lg:gap-x-24.5 gap-y-14 ${HelveticaNeue.className}`}
+          >
             {/* Contact */}
             <div className="flex flex-col gap-y-4">
-              <p className="text-white font-semibold text-lg lg:text-xl">Reach out</p>
+              <p className="text-white font-semibold text-lg lg:text-xl">
+                Reach out
+              </p>
               <div className="flex flex-col gap-y-3">
                 <Link
-                  href=""
-                  className="relative w-fit text-white font-light text-lg after:absolute after:bottom-0 after:left-0 after:h-[0.5px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                  href="tel:+2345018019595"
+                  className="relative w-fit text-white font-light text-base lg:text-lg after:absolute after:bottom-0 after:left-0 after:h-[0.5px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
                 >
                   +234 501-801 9595
                 </Link>
 
                 <Link
-                  href=""
-                  className="relative w-fit text-white font-light text-lg after:absolute after:bottom-0 after:left-0 after:h-[0.5px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                  href="mailto:contact@cintsestate.com"
+                  className="relative w-fit text-white font-light text-base lg:text-lg after:absolute after:bottom-0 after:left-0 after:h-[0.5px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
                 >
                   Contact@cintsestate.com
                 </Link>
@@ -102,7 +106,9 @@ const Footer = () => {
 
             {/* Main */}
             <div className="flex flex-col gap-y-4">
-              <p className="text-white font-semibold text-lg lg:text-xl">Main</p>
+              <p className="text-white font-semibold text-lg lg:text-xl">
+                Main
+              </p>
               <div className="flex flex-col gap-y-3">
                 {nav.slice(0, 4).map((item, index) => (
                   <Link
@@ -118,9 +124,11 @@ const Footer = () => {
 
             {/* About Us */}
             <div className="flex flex-col gap-y-4">
-              <p className="text-white font-semibold text-lg lg:text-xl">About Us</p>
+              <p className="text-white font-semibold text-lg lg:text-xl">
+                About Us
+              </p>
               <div className="flex flex-col gap-y-3">
-                {nav.slice(4,8).map((item, index) => (
+                {nav.slice(4, 8).map((item, index) => (
                   <Link
                     href={item.path}
                     key={index}
@@ -134,7 +142,9 @@ const Footer = () => {
 
             {/* Location */}
             <div className="flex flex-col gap-y-4">
-              <p className="text-white font-semibold text-lg lg:text-xl">Location</p>
+              <p className="text-white font-semibold text-lg lg:text-xl">
+                Location
+              </p>
               <p className="text-white font-light text-base lg:text-lg">
                 124 Kensington High Street London, <br />
                 W8 7RG, United Kingdom
