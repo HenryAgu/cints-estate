@@ -4,10 +4,20 @@
 /* Colors Naming Convention */
 @theme {
   --color-brand-primary-500: var(--brand-primary-500);
+  --color-brand-neutral-300: var(--brand-neutral-300);
+  --color-brand-neutral-500: var(--brand-neutral-500);
+  --color-brand-secondary-500: var(--brand-secondary-500);
+  --color-brand-secondary-600: var(--brand-secondary-600);
 }
 
 :root{
   --brand-primary-500: #354737;
+
+  --brand-neutral-300: #606060;
+  --brand-neutral-500: #121212;
+
+  --brand-secondary-500: #A78F6B;
+  --brand-secondary-600: #988261;
 }
 
 .font-didot{

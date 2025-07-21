@@ -1,9 +1,69 @@
-import React from 'react'
+import localFont from "next/font/local";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
-const Navbar = () => {
-  return (
-    <nav>Navbar</nav>
-  )
+const HelveticaNeue = localFont({
+  src: "../../app/fonts/HelveticaNeueThin.otf",
+});
+
+interface Nav {
+  title: string;
+  path: string;
 }
 
-export default Navbar
+const nav: Nav[] = [
+  {
+    title: "Shortlet",
+    path: "",
+  },
+  {
+    title: "Buy",
+    path: "",
+  },
+  {
+    title: "Development",
+    path: "",
+  },
+];
+
+interface NavbarProps {
+  color?: string;
+}
+
+const Navbar = ({ color = "#988261" }: NavbarProps) => {
+  return (
+    <nav
+      className={`${HelveticaNeue.className} px-4 lg:px-20 py-5 container w-full mx-auto flex items-center justify-between`}
+      style={{ color }}
+    >
+      <ul className="flex items-center gap-x-10">
+        {nav.map((item, index) => (
+          <li key={index}>
+            <Link
+              href={item.path}
+              className="text-lg font-normal transition-all duration-200 ease-in hover:font-medium"
+            >
+              {item.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+
+      <div className="flex items-center gap-x-0.5">
+        <Image
+          src="/icons/flag.svg"
+          alt="flag-icon"
+          width={32}
+          height={24}
+          className="lg:aspect-[32/24]"
+        />
+        <select name="" id="" className="text-lg font-normal">
+          <option value="United Kingdom">United Kingdom</option>
+        </select>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
