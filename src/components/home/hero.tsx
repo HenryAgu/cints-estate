@@ -13,8 +13,8 @@ function Hero() {
       <div className="relative z-10 min-h-[824px] flex flex-col">
         <Navbar color="#988261" />
         <div className="flex-1 flex flex-col justify-center gap-y-5 items-center text-center text-brand-secondary-600">
-          <h1 className="text-[64px] font-bold">Premium Real Estate</h1>
-          <p className={`${HelveticaNeue.className} text-xl font-light`}>
+          <h1 className="text-5xl lg:text-[64px] font-bold">Premium Real Estate</h1>
+          <p className={`${HelveticaNeue.className} text-base lg:text-xl font-light`}>
             Exceptional homes, curated for those who expect more <br />
             Elegance begins with a single click.
           </p>
