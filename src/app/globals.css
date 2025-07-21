@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
 @import "tailwindcss";
 
-body {
+/* Colors Naming Convention */
+@theme {
+  --color-brand-primary-500: var(--brand-primary-500);
+}
 
+:root{
+  --brand-primary-500: #354737;
 }
 
 .font-didot{
