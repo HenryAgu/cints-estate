@@ -1,6 +1,7 @@
-import Header from "@/components/header";
+import Header from "@/components/shared/header";
 import localFont from 'next/font/local'
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/shared/navbar";
+import KeyService from "@/components/shared/keyService";
 
 const HelveticaNeue = localFont({
   src: '../app/fonts/HelveticaNeueThin.otf'
@@ -17,6 +18,7 @@ export default function Home() {
         quas assumenda harum error aliquid quos est quisquam maxime laboriosam
         quia voluptates.
       </p>
+      <KeyService/>
     </main>
   );
 }

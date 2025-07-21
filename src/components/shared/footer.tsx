@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 const HelveticaNeue = localFont({
-  src: "../app/fonts/HelveticaNeueThin.otf",
+  src: "../../app/fonts/HelveticaNeueThin.otf",
 });
 
 interface Socials {
@@ -83,11 +83,11 @@ const Footer = () => {
             className={`flex lg:flex-row flex-col lg:gap-x-24.5 gap-y-14 ${HelveticaNeue.className}`}
           >
             {/* Contact */}
-            <div className="flex flex-col gap-y-4">
+            <div className="flex flex-col gap-y-3 lg:gap-y-4">
               <p className="text-white font-semibold text-lg lg:text-xl">
                 Reach out
               </p>
-              <div className="flex flex-col gap-y-3">
+              <div className="flex flex-col gap-y-2 lg:gap-y-3">
                 <Link
                   href="tel:+2345018019595"
                   className="relative w-fit text-white font-light text-base lg:text-lg after:absolute after:bottom-0 after:left-0 after:h-[0.5px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
@@ -105,11 +105,11 @@ const Footer = () => {
             </div>
 
             {/* Main */}
-            <div className="flex flex-col gap-y-4">
+            <div className="flex flex-col gap-y-3 lg:gap-y-4">
               <p className="text-white font-semibold text-lg lg:text-xl">
                 Main
               </p>
-              <div className="flex flex-col gap-y-3">
+              <div className="flex flex-col gap-y-2 lg:gap-y-3">
                 {nav.slice(0, 4).map((item, index) => (
                   <Link
                     href={item.path}
@@ -123,11 +123,11 @@ const Footer = () => {
             </div>
 
             {/* About Us */}
-            <div className="flex flex-col gap-y-4">
+            <div className="flex flex-col gap-y-3 lg:gap-y-4">
               <p className="text-white font-semibold text-lg lg:text-xl">
                 About Us
               </p>
-              <div className="flex flex-col gap-y-3">
+              <div className="flex flex-col gap-y-2 lg:gap-y-3">
                 {nav.slice(4, 8).map((item, index) => (
                   <Link
                     href={item.path}
@@ -141,11 +141,11 @@ const Footer = () => {
             </div>
 
             {/* Location */}
-            <div className="flex flex-col gap-y-4">
+            <div className="flex flex-col gap-y-3 lg:gap-y-4">
               <p className="text-white font-semibold text-lg lg:text-xl">
                 Location
               </p>
-              <p className="text-white font-light text-base lg:text-lg">
+              <p className="text-white font gap-y-2-lg:light text-base lg:text-lg">
                 124 Kensington High Street London, <br />
                 W8 7RG, United Kingdom
               </p>
