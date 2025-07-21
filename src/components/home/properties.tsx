@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import React from "react";
 import PropertyCard from "./propertyCard";
+import Link from "next/link";
 
 const HelveticaNeue = localFont({
   src: "../../app/fonts/HelveticaNeueThin.otf",
@@ -20,6 +21,14 @@ const Properties = () => {
         </p>
       </div>
       <PropertyCard />
+      <div className="mt-10 flex justify-center">
+        <Link
+          href=""
+          className={`${HelveticaNeue.className} bg-brand-primary-500 text-white py-2.5 px-5 rounded-[60px] text-base lg:text-lg font-medium leading-[140%]`}
+        >
+          View More properties
+        </Link>
+      </div>
     </section>
   );
 };
