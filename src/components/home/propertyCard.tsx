@@ -50,22 +50,25 @@ const PropertyCard = () => {
   return (
     <div className="grid grid-col-1 lg:grid-cols-3 gap-x-5 gap-y-8 mt-14">
       {properties.map((item, index) => (
-        <div className="border border-[#E4DCD1] rounded-[20px] p-5 flex flex-col gap-y-5">
+        <div
+          className="border border-[#E4DCD1] rounded-[20px] p-5 flex flex-col gap-y-5"
+          key={index}
+        >
           <Image
-            src="/images/property.png"
+            src={item.image}
             alt="property"
             width={374}
             height={340}
             className="w-full h-[340px] aspect-[374/340] rounded-[20px]"
           />
-          <div className="flex flex-col gap-y-3 items-center">
+          <div className="flex flex-col gap-y-2 lg:gap-y-3 items-center">
             <span
-              className={`${HelveticaNeue.className} text-lg text-brand-secondary-500 font-normal`}
+              className={`${HelveticaNeue.className} text-base lg:text-lg text-brand-secondary-500 font-normal`}
             >
               For Sale
             </span>
-            <p className="text-[26px] text-black font-bold leading-[140%]">
-              The Crestwood Estate
+            <p className="text-xl lg:text-[26px] text-black font-bold lg:leading-[140%]">
+              {item.title}
             </p>
             <div className="flex items-center gap-x-0.5">
               <Image
@@ -73,49 +76,55 @@ const PropertyCard = () => {
                 alt="location"
                 width={24}
                 height={24}
-                className="aspect-square"
+                className="aspect-square lg:w-6 lg:h-6 w-4 h-4"
               />
               <p
-                className={`${HelveticaNeue.className} text-brand-neutral-300 text-lg font-normal leading-[140%]`}
+                className={`${HelveticaNeue.className} text-brand-neutral-300 text-base lg:text-lg font-normal lg:leading-[140%]`}
               >
-                Surrey Hills, Surrey
+                {item.address}
               </p>
             </div>
-            <p className="text-[23px] font-bold leading-[140%] text-brand-secondary-500">
-              £25,000/month
+            <p className="text-xl lg:text-[23px] font-bold lg:leading-[140%] text-brand-secondary-500">
+              £{item.price}/month
             </p>
             <div
               className={`${HelveticaNeue.className} flex items-center justify-between mt-2 w-full`}
             >
-              <div className="flex flex-col items-center gap-y-2">
+              <div className="flex flex-col items-center gap-y-1 lg:gap-y-2">
                 <Image
                   src="/icons/material-symbols-light_zoom-in-map.svg"
                   width={24}
                   height={24}
-                  className="aspect-square"
+                  className="aspect-square lg:w-6 lg:h-6 w-4 h-4"
                   alt="icon"
                 />
-                <p className="text-black text-lg font-normal">1,800 sq. ft.</p>
+                <p className="text-black text-base lg:text-lg font-normal">
+                  {item.landSize} sq. ft.
+                </p>
               </div>
-              <div className="flex flex-col items-center gap-y-2">
+              <div className="flex flex-col items-center gap-y-1 lg:gap-y-2">
                 <Image
                   src="/icons/famicons_bed-outline.svg"
                   width={24}
                   height={24}
-                  className="aspect-square"
+                  className="aspect-square lg:w-6 lg:h-6 w-4 h-4"
                   alt="icon"
                 />
-                <p>4 Beds</p>
+                <p className="text-black text-base lg:text-lg font-normal">
+                  {item.noOfBeds} Beds
+                </p>
               </div>
-              <div className="flex flex-col items-center gap-y-2">
+              <div className="flex flex-col items-center gap-y-1 lg:gap-y-2">
                 <Image
                   src="/icons/iconoir_bathroom.svg"
                   width={24}
                   height={24}
-                  className="aspect-square"
+                  className="aspect-square lg:w-6 lg:h-6 w-4 h-4"
                   alt="icon"
                 />
-                <p>2 Baths</p>
+                <p className="text-black text-base lg:text-lg font-normal">
+                  {item.noOfBaths} Baths
+                </p>
               </div>
             </div>
           </div>
