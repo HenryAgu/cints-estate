@@ -15,17 +15,17 @@ const KeyService = () => {
           <p className={`text-lg lg:text-xl ${HelveticaNeue.className} font-normal`}>
             Key Services
           </p>
-          <h3 className="font-semibold text-4xl lg:text-[40px] lg:leading-[130%]">
-            What We Get to Offer <br /> you at Cints Estate
+          <h3 className="font-semibold text-3xl lg:text-[40px] lg:leading-[130%] lg:max-w-[483px]">
+            What We Get to Offer you at Cints Estate
           </h3>
         </div>
-        <div className="mt-10 lg:mt-20 flex lg:flex-row flex-col items-center gap-y-10 gap-x-24.5">
+        <div className="mt-10 lg:mt-20 grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-24.5">
           <Image
             src="/icons/shortlet.svg"
             alt="icon"
             width={131}
             height={115}
-            className="aspect-[65/57] lg:aspect-[131/115]"
+            className="aspect-[131/115]"
           />
 
           <Image
@@ -33,7 +33,7 @@ const KeyService = () => {
             alt="icon"
             width={179}
             height={115}
-            className="aspect-[65/57] lg:aspect-[179/115]"
+            className="aspect-[179/115]"
           />
 
           <Image
@@ -41,7 +41,7 @@ const KeyService = () => {
             alt="icon"
             width={147}
             height={115}
-            className="aspect-[65/57] lg:aspect-[147/115]"
+            className="aspect-[147/115]"
           />
         </div>
       </div>
