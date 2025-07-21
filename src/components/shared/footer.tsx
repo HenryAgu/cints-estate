@@ -61,10 +61,6 @@ const nav: Nav[] = [
     title: "Privacy policy",
     path: "/about",
   },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
 ];
 
 const Footer = () => {
