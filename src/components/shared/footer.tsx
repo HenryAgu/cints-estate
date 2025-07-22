@@ -55,7 +55,7 @@ const nav: Nav[] = [
   },
   {
     title: "Terms of Use",
-    path: "/about",
+    path: "/terms",
   },
   {
     title: "Privacy policy",
