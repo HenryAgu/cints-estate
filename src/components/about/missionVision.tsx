@@ -27,27 +27,30 @@ const HelveticaNeue = localFont({
 const MissionVision = () => {
   return (
     <section className="lg:my-12 lg:mb-18 mx-4 lg:mx-20 flex lg:flex-row flex-col gap-4">
-        {mission.map((item) => (
-          <div className="flex flex-col bg-[#F6F4F0] border border-[#E1E0E0] p-5 py-10 lg:p-10 rounded-3xl">
-            <Image
-              src="/icons/user.svg"
-              alt="user_icon"
-              width={36}
-              height={36}
-              className="w-9 h-9 aspect-square"
-            />
-            <div className="flex flex-col gap-y-4 mt-8">
-              <p className="text-brand-neutral-500 text-xl lg:text-[26px] lg:leading-[140%] font-bold">
-                {item.title}
-              </p>
-              <p
-                className={`${HelveticaNeue.className} text-[#414141] font-light text-base lg:text-lg`}
-              >
-                {item.content}
-              </p>
-            </div>
+      {mission.map((item) => (
+        <div
+          className="flex flex-col bg-[#F6F4F0] border border-[#E1E0E0] p-5 py-10 lg:p-10 rounded-3xl"
+          key={item.title}
+        >
+          <Image
+            src="/icons/user.svg"
+            alt="user_icon"
+            width={36}
+            height={36}
+            className="w-9 h-9 aspect-square"
+          />
+          <div className="flex flex-col gap-y-4 mt-8">
+            <p className="text-brand-neutral-500 text-xl lg:text-[26px] lg:leading-[140%] font-bold">
+              {item.title}
+            </p>
+            <p
+              className={`${HelveticaNeue.className} text-[#414141] font-light text-base lg:text-lg`}
+            >
+              {item.content}
+            </p>
           </div>
-        ))}
+        </div>
+      ))}
     </section>
   );
 };
