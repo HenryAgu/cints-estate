@@ -23,7 +23,7 @@ const Banner = ({ title, date, text }: BannerProps) => {
         </p>
       )}
       <p
-        className={`${HelveticaNeue.className} text-base text-center lg:text-lg font-normal leading-[140%] max-w-[379px]`}
+        className={`${HelveticaNeue.className} text-base text-center lg:text-lg font-normal leading-[140%] max-w-[320px] lg:max-w-[379px]`}
       >
         {text}
       </p>
