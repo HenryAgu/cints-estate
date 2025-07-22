@@ -10,13 +10,14 @@ const RequestText = () => {
   return (
     <div className="basis-[45%] flex flex-col gap-y-3">
       <p className="lg:leading-[130%] font-normal text-3xl lg:text-[40px]">
-        Let’s Find Your <br /> Perfect Property
+        Let&#39;s Find Your <br /> Perfect Property
       </p>
       <p
         className={`max-w-full lg:max-w-[465px] ${HelveticaNeue.className} text-base lg:text-lg font-light lg:leading-[140%]`}
       >
-        Whether you're buying your first home or searching for an investment,
-        we’re here to match you with a property that fits your life and goals.
+        Whether you&#39;re buying your first home or searching for an
+        investment, we&#39;re here to match you with a property that fits your
+        life and goals.
       </p>
       <div className="flex lg:flex-row flex-col gap-y-10 gap-x-10 mt-10">
         <div className="flex flex-col gap-y-3 lg:gap-y-6">
