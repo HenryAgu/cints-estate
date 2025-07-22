@@ -6,7 +6,7 @@ import React from "react";
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen container w-full mx-auto font-didot">
+    <main className="min-h-screen container w-full mx-auto font-didot">
       <Header />
       <Navbar />
       <Banner
@@ -18,7 +18,7 @@ const ContactPage = () => {
           <ContactSection/>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
