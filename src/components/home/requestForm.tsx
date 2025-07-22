@@ -112,7 +112,7 @@ const RequestForm = () => {
         </div>
       </div>
       <Button
-        className={`${HelveticaNeue.className} p-5 mt-2.5 lg:mt-5 cursor-pointer w-fit bg-brand-secondary-500 rounded-[60px] font-medium text-lg leading-[140%]`}
+        className={`${HelveticaNeue.className} p-5 mt-2.5 lg:mt-5 cursor-pointer w-full lg:w-fit bg-brand-secondary-500 rounded-[60px] font-medium text-lg leading-[140%]`}
       >
         Make Request
       </Button>
