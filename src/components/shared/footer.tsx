@@ -59,7 +59,7 @@ const nav: Nav[] = [
   },
   {
     title: "Privacy policy",
-    path: "/about",
+    path: "/privacy",
   },
 ];
 
