@@ -11,7 +11,7 @@ const HelveticaNeue = localFont({
 
 const RequestForm = () => {
   return (
-    <form className="basis-[55%] bg-white rounded-[28px] px-5 py-10 lg:p-10 flex flex-col gap-y-5 lg:gap-y-8">
+    <form className="md:basis-[55%] bg-white rounded-[28px] px-5 py-10 lg:p-10 flex flex-col gap-y-5 lg:gap-y-8">
       <div
         className={`flex lg:flex-row gap-x-1.5 flex-col gap-y-5 ${HelveticaNeue.className}`}
       >

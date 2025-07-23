@@ -8,7 +8,7 @@ const HelveticaNeue = localFont({
 
 const RequestText = () => {
   return (
-    <div className="basis-[45%] flex flex-col gap-y-3">
+    <div className="md:basis-[45%] flex flex-col gap-y-3">
       <p className="lg:leading-[130%] font-normal text-3xl lg:text-[40px]">
         Let&#39;s Find Your <br /> Perfect Property
       </p>

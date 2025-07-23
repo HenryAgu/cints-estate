@@ -26,7 +26,7 @@ const HelveticaNeue = localFont({
 
 const MissionVision = () => {
   return (
-    <section className="lg:my-12 lg:mb-18 mx-4 lg:mx-20 flex lg:flex-row flex-col gap-4 lg:gap-5">
+    <section className="lg:my-12 lg:mb-18 mx-4 lg:mx-20 flex md:flex-row flex-col gap-4 lg:gap-5">
       {mission.map((item) => (
         <div
           className="flex flex-col bg-[url(/images/about.png)] bg-no-repeat bg-cover border border-[#E1E0E0] p-5 py-10 lg:p-10 rounded-3xl"

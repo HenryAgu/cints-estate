@@ -9,7 +9,7 @@ const gridImages: { src: string; alt: string }[] = [
 ];
 const ImageGrid = () => {
   return (
-    <section className="lg:my-18 my-12 mx-4 lg:mx-20 flex lg:flex-row flex-col gap-4 lg:gap-5 h-full">
+    <section className="lg:my-18 my-12 md:mt-5 mx-4 lg:mx-20 flex md:flex-row flex-col gap-4 lg:gap-5 h-full">
       <div className="w-full basis-[48%]">
         <Image
           src="/images/grid1.png"

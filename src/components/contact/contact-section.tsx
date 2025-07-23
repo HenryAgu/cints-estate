@@ -8,7 +8,7 @@ const HelveticaNeue = localFont({
 
 const ContactSection = () => {
   return (
-    <div className="border border-[#ECECEC] w-full lg:w-[60%] rounded-[28px] bg-[#F8F8F8] p-5 lg:p-10">
+    <div className="border border-[#ECECEC] w-full lg:w-[60%] rounded-[28px] bg-[#F8F8F8] p-5 md:p-10">
       <div className="flex flex-col gap-y-4">
         <p className="lg:text-[28px] font-bold lg:leading-[130%] text-xl">
           Your Dream Home Is Just a Click Away.

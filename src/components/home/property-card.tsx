@@ -13,7 +13,7 @@ interface PropertyCardResponse {
 
 const PropertyCard = ({ item }: PropertyCardResponse) => {
   return (
-    <div className="border border-[#E4DCD1] rounded-[20px] lg:p-3 xl:p-5 flex flex-col gap-y-5">
+    <div className="border border-[#E4DCD1] rounded-[20px] p-3 xl:p-5 flex flex-col gap-y-5">
       <Image
         src={item.image}
         alt="property"

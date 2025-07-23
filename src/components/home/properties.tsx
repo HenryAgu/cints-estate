@@ -60,7 +60,7 @@ const Properties = () => {
           Curated Luxury by Cints Estate
         </p>
       </div>
-      <div className="grid grid-col-1 lg:grid-cols-3 gap-x-5 gap-y-10 mt-14">
+      <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 md:gap-y-5 lg:gap-y-10 mt-14">
         {properties.map((item, index) => (
           <PropertyCard item={item} key={index}/>
         ))}

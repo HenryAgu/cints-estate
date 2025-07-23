@@ -42,7 +42,7 @@ const Navbar = ({ color = "#988261" }: NavbarProps) => {
           <li key={index}>
             <Link
               href={item.path}
-              className="text-base lg:text-lg font-normal transition-all duration-200 ease-in hover:font-medium"
+              className="relative text-base lg:text-lg font-normal transition-all duration-200 ease-in hover:font-bold"
             >
               {item.title}
             </Link>
