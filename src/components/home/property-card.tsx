@@ -13,15 +13,15 @@ interface PropertyCardResponse {
 
 const PropertyCard = ({ item }: PropertyCardResponse) => {
   return (
-    <div className="border border-[#E4DCD1] rounded-[20px] p-5 flex flex-col gap-y-5">
+    <div className="border border-[#E4DCD1] rounded-[20px] lg:p-3 xl:p-5 flex flex-col gap-y-5">
       <Image
         src={item.image}
         alt="property"
         width={374}
         height={340}
-        className="w-full h-[340px] aspect-[374/340] rounded-[20px]"
+        className="w-full xl:h-[340px] lg:h-[250px] lg:aspect-[374/300] xl:aspect-[374/340] rounded-[20px]"
       />
-      <div className="flex flex-col gap-y-2 lg:gap-y-3 items-center">
+      <div className="flex flex-col gap-y-2 xl:gap-y-3 items-center">
         <span
           className={`${HelveticaNeue.className} text-base lg:text-lg text-brand-secondary-500 font-normal`}
         >

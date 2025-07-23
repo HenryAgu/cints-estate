@@ -49,7 +49,7 @@ const properties: Property[] = [
 
 const Properties = () => {
   return (
-    <section className="container w-full mx-auto px-4 lg:px-20 py-10 lg:py-24">
+    <section className="container w-full mx-auto px-4 lg:px-10 xl:px-14 2xl:px-20 py-10 lg:py-20 xl:py-24">
       <div className="flex flex-col items-center text-center">
         <p
           className={`${HelveticaNeue.className} text-brand-neutral-500 font-normal text-lg lg:text-xl`}

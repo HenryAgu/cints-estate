@@ -66,7 +66,7 @@ const nav: Nav[] = [
 const Footer = () => {
   return (
     <footer className="bg-brand-primary-500">
-      <div className="container mx-auto w-full px-4 lg:px-20 py-10 lg:py-14">
+      <div className="container mx-auto w-full px-4 lg:px-10 xl:px-14 2xl:px-20 py-10 2xl:py-14">
         <div className="flex flex-col lg:items-center gap-y-10">
           <Image
             src="/images/Logo.svg"
@@ -76,7 +76,7 @@ const Footer = () => {
             className="lg:w-[104px] lg:h-[79px] w-16 h-12 mx-auto"
           />
           <div
-            className={`flex lg:flex-row flex-col lg:gap-x-24.5 gap-y-14 ${HelveticaNeue.className}`}
+            className={`flex lg:flex-row flex-col lg:gap-x-20 xl:gap-x-28 2xl:gap-x-24.5 gap-y-14 ${HelveticaNeue.className}`}
           >
             {/* Contact */}
             <div className="flex flex-col gap-y-3 lg:gap-y-4">

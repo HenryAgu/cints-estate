@@ -13,8 +13,8 @@ const ContactPage = () => {
         title="Call Us"
         text="Have questions about buying, selling, or investing in property? Our expert team is just a phone call away."
       />
-      <div className="lg:bg-[url(/images/contact-background.png)] bg-no-repeat bg-cover max-h-full mx-4 lg:m-20 rounded-[28px]">
-        <div className="lg:px-20 py-15 flex justify-end">
+      <div className="lg:bg-[url(/images/contact-background.png)] bg-no-repeat bg-cover max-h-full mx-4 xl:m-14 2xl:m-20 rounded-[28px]">
+        <div className="lg:px-14 2xl:px-20 py-15 flex justify-end">
           <ContactSection/>
         </div>
       </div>

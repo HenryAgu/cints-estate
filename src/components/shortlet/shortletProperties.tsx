@@ -115,7 +115,7 @@ const properties: Property[] = [
 
 const ShortletProperties = () => {
   return (
-    <section className="mx-4 lg:mx-20">
+    <section className="mx-4 lg:mx-10 xl:mx-14 2xl:mx-20">
       <h1 className="text-brand-neutral-500 font-bold text-[28px] lg:text-[32px] lg:leading-[130%]">
         Shortlet Properties
       </h1>

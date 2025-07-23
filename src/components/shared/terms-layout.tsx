@@ -39,7 +39,7 @@ export default function TermsLayout({ sections, fontClassName = "font-serif" }: 
   }, [sections]);
 
   return (
-    <div className="flex lg:flex-row flex-col min-h-screen text-[#121212] px-4 lg:px-20 py-8 lg:py-14">
+    <div className="flex lg:flex-row flex-col min-h-screen text-[#121212] px-4 lg:px-8 xl:px-10 2xl:px-20 py-8 lg:py-14">
       {/* Sidebar */}
       <aside className={`${fontClassName} w-full lg:w-64 bg-white py-4 lg:p-4 lg:sticky lg:top-0 h-fit lg:h-screen`}>
         <nav className="space-y-2">

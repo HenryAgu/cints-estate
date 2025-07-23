@@ -34,7 +34,7 @@ interface NavbarProps {
 const Navbar = ({ color = "#988261" }: NavbarProps) => {
   return (
     <nav
-      className={`${HelveticaNeue.className} px-4 lg:px-20 py-5 container w-full mx-auto flex lg:flex-row flex-col gap-y-2 items-center justify-between`}
+      className={`${HelveticaNeue.className} px-4 lg:px-10 xl:px-14 2xl:px-20 py-5 container w-full mx-auto flex lg:flex-row flex-col gap-y-2 items-center justify-between`}
       style={{ color }}
     >
       <ul className="flex items-center gap-x-5 lg:gap-x-10">
