@@ -11,6 +11,7 @@ export interface Property {
   image: string;
   title: string;
   address: string;
+  type: "For Sale" | "Forthcoming Development" | "Completed Development";
   price: string;
   landSize: string;
   noOfBeds: number;
@@ -22,6 +23,7 @@ const properties: Property[] = [
     image: "/images/property.png",
     title: "The Crestwood Estate",
     address: "Surrey Hills, Surrey",
+    type: "For Sale",
     price: "25,000",
     landSize: "1,800",
     noOfBeds: 4,
@@ -31,6 +33,7 @@ const properties: Property[] = [
     image: "/images/property.png",
     title: "The Crestwood Estate",
     address: "Surrey Hills, Surrey",
+    type: "For Sale",
     price: "25,000",
     landSize: "1,800",
     noOfBeds: 4,
@@ -40,6 +43,7 @@ const properties: Property[] = [
     image: "/images/property.png",
     title: "The Crestwood Estate",
     address: "Surrey Hills, Surrey",
+    type: "For Sale",
     price: "25,000",
     landSize: "1,800",
     noOfBeds: 4,

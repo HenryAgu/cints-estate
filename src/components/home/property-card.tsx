@@ -23,9 +23,9 @@ const PropertyCard = ({ item }: PropertyCardResponse) => {
       />
       <div className="flex flex-col gap-y-2 xl:gap-y-3 items-center">
         <span
-          className={`${HelveticaNeue.className} text-base lg:text-lg text-brand-secondary-500 font-normal`}
+          className={`${HelveticaNeue.className} text-base lg:text-lg text-brand-secondary-500 font-medium`}
         >
-          For Sale
+          {item.type}
         </span>
         <p className="text-xl lg:text-[26px] text-black font-bold lg:leading-[140%]">
           {item.title}

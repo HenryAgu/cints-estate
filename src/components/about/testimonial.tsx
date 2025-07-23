@@ -31,7 +31,7 @@ const HelveticaNeue = localFont({
 
 const Testimonial = () => {
   return (
-    <section className="relative mx-4 lg:mx-20 my-10 lg:my-24 bg-[url(/images/testimonial.png)] bg-no-repeat bg-cover h-full py-35 lg:py-20 rounded-4xl">
+    <section className="relative mx-4 lg:mx-20 my-10 lg:my-24 bg-[url(/images/testimonial.png)] bg-no-repeat bg-cover h-full py-35 md:py-20 rounded-4xl">
       <div className="absolute inset-0 rounded-4xl">
         <div className="relative z-10 flex flex-wrap gap-x-5 lg:gap-x-[90px] justify-center items-center h-full">
           {testimony.map((item) => (
