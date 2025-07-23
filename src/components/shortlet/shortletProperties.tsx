@@ -1,0 +1,131 @@
+import React from "react";
+import PropertyCard from "../home/propertyCard";
+import { Property } from "../home/properties";
+
+const properties: Property[] = [
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+];
+
+const ShortletProperties = () => {
+  return (
+    <section className="mx-4 lg:mx-20">
+      <h1 className="text-brand-neutral-500 font-bold text-[32px] leading-[130%]">
+        Shortlet Properties
+      </h1>
+      <div className="grid grid-col-1 lg:grid-cols-3 gap-5 mt-10 mb-20">
+        {properties.map((item, index) => (
+          <PropertyCard item={item} key={index} />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default ShortletProperties;

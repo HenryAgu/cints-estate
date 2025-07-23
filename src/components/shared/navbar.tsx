@@ -15,15 +15,15 @@ interface Nav {
 const nav: Nav[] = [
   {
     title: "Shortlet",
-    path: "",
+    path: "/shortlet",
   },
   {
     title: "Buy",
-    path: "",
+    path: "/buy",
   },
   {
     title: "Development",
-    path: "",
+    path: "/development",
   },
 ];
 
