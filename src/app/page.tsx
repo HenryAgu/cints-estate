@@ -1,8 +1,8 @@
 import Header from "@/components/shared/header";
-import KeyService from "@/components/shared/keyService";
+import KeyService from "@/components/shared/key-service";
 import Hero from "@/components/home/hero";
 import Properties from "@/components/home/properties";
-import MakeRequest from "@/components/home/makeRequest";
+import MakeRequest from "@/components/home/make-request";
 
 
 export default function Home() {

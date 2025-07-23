@@ -43,7 +43,7 @@ const nav: Nav[] = [
   },
   {
     title: "Properties",
-    path: "/properties",
+    path: "/buy",
   },
   {
     title: "Contact Us",

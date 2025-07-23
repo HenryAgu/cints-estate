@@ -1,5 +1,5 @@
 import React from "react";
-import PropertyCard from "../home/propertyCard";
+import PropertyCard from "../home/property-card";
 import { Property } from "../home/properties";
 
 const properties: Property[] = [

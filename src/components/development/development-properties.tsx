@@ -113,11 +113,11 @@ const properties: Property[] = [
   },
 ];
 
-const BuyProperties = () => {
+const DevelopmentProperties = () => {
   return (
-    <section className="mx-4 lg:mx-20">
+    <section className="mx-4 lg:mx-20 my-10">
       <h1 className="text-brand-neutral-500 font-bold text-[32px] leading-[130%]">
-        Buy Properties
+        Recent Listings
       </h1>
       <div className="grid grid-col-1 lg:grid-cols-3 gap-5 mt-10 mb-20">
         {properties.map((item, index) => (
@@ -128,4 +128,4 @@ const BuyProperties = () => {
   );
 };
 
-export default BuyProperties;
+export default DevelopmentProperties;

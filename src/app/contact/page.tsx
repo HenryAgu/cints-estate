@@ -1,4 +1,4 @@
-import ContactSection from "@/components/contact/contactSection";
+import ContactSection from "@/components/contact/contact-section";
 import Banner from "@/components/privacy/banner";
 import Header from "@/components/shared/header";
 import Navbar from "@/components/shared/navbar";

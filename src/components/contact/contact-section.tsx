@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import React from "react";
-import ContactForm from "./contactForm";
+import ContactForm from "./contact-form";
 
 const HelveticaNeue = localFont({
   src: "../../app/fonts/HelveticaNeueThin.otf",

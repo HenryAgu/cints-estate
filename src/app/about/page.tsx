@@ -1,20 +1,24 @@
 import Hero from "@/components/about/hero";
-import ImageGrid from "@/components/about/imageGrid";
-import MissionVision from "@/components/about/missionVision";
+import ImageGrid from "@/components/about/image-grid";
+import MissionVision from "@/components/about/mission-vision";
 import Testimonial from "@/components/about/testimonial";
-import MakeRequest from "@/components/home/makeRequest";
+import MakeRequest from "@/components/home/make-request";
 import Header from "@/components/shared/header";
-import KeyService from "@/components/shared/keyService";
+import KeyService from "@/components/shared/key-service";
 import React from "react";
 
 const AboutPage = () => {
   return (
     <main className="min-h-screen container w-full mx-auto font-didot">
       <Header />
-      <Hero />
-      <Testimonial/>
-      <MissionVision/>
-      <ImageGrid/>
+      <Hero
+        title="About Us"
+        subtitle="We&rsquo;re more than just a property platform, we are your real
+            estate partner."
+      />
+      <Testimonial />
+      <MissionVision />
+      <ImageGrid />
       <KeyService />
       <MakeRequest />
     </main>

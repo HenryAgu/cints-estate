@@ -1,7 +1,7 @@
 import Banner from "@/components/privacy/banner";
 import Header from "@/components/shared/header";
 import Navbar from "@/components/shared/navbar";
-import TermsOfUsePage from "@/components/shared/termsOfUse";
+import TermsOfUsePage from "@/components/shared/terms-of-use";
 import React from "react";
 
 const PrivacyPage = () => {

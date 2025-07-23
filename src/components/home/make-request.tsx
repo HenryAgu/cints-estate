@@ -1,6 +1,6 @@
 import React from "react";
-import RequestText from "./requestText";
-import RequestForm from "./requestForm";
+import RequestText from "./request-text";
+import RequestForm from "./request-form";
 
 const MakeRequest = () => {
   return (

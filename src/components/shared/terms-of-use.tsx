@@ -1,6 +1,6 @@
 import { Mail, MapPin } from "lucide-react";
 import localFont from "next/font/local";
-import TermsLayout from "./termsLayout";
+import TermsLayout from "./terms-layout";
 
 const HelveticaNeue = localFont({
   src: "../../app/fonts/HelveticaNeueThin.otf",
