@@ -71,7 +71,7 @@ const Properties = () => {
       </div>
       <div className="mt-10 flex justify-center">
         <Link
-          href="/buy"
+          href="/properties"
           className={`${HelveticaNeue.className} bg-brand-primary-500 text-white py-2.5 px-5 rounded-[60px] text-base lg:text-lg font-medium leading-[140%]`}
         >
           View More properties

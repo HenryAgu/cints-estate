@@ -1,16 +1,142 @@
-import Hero from '@/components/about/hero'
-import DevelopmentProperties from '@/components/development/development-properties'
-import Header from '@/components/shared/header'
-import React from 'react'
+import Hero from "@/components/about/hero";
+import DevelopmentProperties from "@/components/development/development-properties";
+import { Property } from "@/components/home/properties";
+import Header from "@/components/shared/header";
+import React from "react";
+
+const properties: Property[] = [
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Forthcoming Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Forthcoming Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Forthcoming Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Forthcoming Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Forthcoming Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Forthcoming Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Forthcoming Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Forthcoming Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Forthcoming Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Completed Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Forthcoming Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "Forthcoming Development",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+];
 
 const DevelopmentPage = () => {
   return (
-    <main className="min-h-screen container w-full mx-auto font-didot"> 
-      <Header/>
-      <Hero title="Development"/>
-      <DevelopmentProperties/>
+    <main className="min-h-screen container w-full mx-auto font-didot">
+      <Header />
+      <Hero title="Development" />
+      <div className="mt-10">
+        <DevelopmentProperties properties={properties} />
+      </div>
     </main>
-  )
-}
+  );
+};
 
-export default DevelopmentPage
+export default DevelopmentPage;

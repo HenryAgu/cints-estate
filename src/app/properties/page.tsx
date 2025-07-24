@@ -1,16 +1,140 @@
 import Hero from "@/components/about/hero";
 import DevelopmentProperties from "@/components/development/development-properties";
+import { Property } from "@/components/home/properties";
 import FilterHeader from "@/components/shared/filter-header";
 import Header from "@/components/shared/header";
 import React from "react";
+
+const properties: Property[] = [
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+  {
+    image: "/images/property.png",
+    title: "The Crestwood Estate",
+    address: "Surrey Hills, Surrey",
+    type: "For Sale",
+    price: "25,000",
+    landSize: "1,800",
+    noOfBeds: 4,
+    noOfBaths: 2,
+  },
+];
 
 const PropertiesPage = () => {
   return (
     <main className="min-h-screen container w-full mx-auto font-didot">
       <Header />
       <Hero title="Properties" />
-      <FilterHeader/>
-      <DevelopmentProperties/>
+      <FilterHeader />
+      <DevelopmentProperties properties={properties} />
     </main>
   );
 };
