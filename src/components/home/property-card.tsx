@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import Image from "next/image";
 import React from "react";
 import { Property } from "./properties";
+import Link from "next/link";
 
 const HelveticaNeue = localFont({
 	src: "../../app/fonts/HelveticaNeueThin.otf",
@@ -13,7 +14,7 @@ interface PropertyCardResponse {
 
 const PropertyCard = ({ item }: PropertyCardResponse) => {
 	return (
-		<div className="border border-[#E4DCD1] rounded-[20px] p-3 xl:p-5 flex flex-col gap-y-5">
+		<Link href={`/properties/${item.id}`} className="border border-[#E4DCD1] rounded-[20px] p-3 xl:p-5 flex flex-col gap-y-5">
 			<Image
 				src={item.image}
 				alt="property"
@@ -88,7 +89,7 @@ const PropertyCard = ({ item }: PropertyCardResponse) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 };
 
