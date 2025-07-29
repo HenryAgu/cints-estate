@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import Image from "next/image";
 import React from "react";
-import { Property } from "./properties";
 import Link from "next/link";
 import { ApartmentType } from "@/sanity/lib/fetch-apartment";
 

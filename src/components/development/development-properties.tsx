@@ -1,6 +1,4 @@
 import React from "react";
-import PropertyCard from "../home/property-card";
-import { Property } from "../home/properties";
 import Properties from "../shared/properties";
 import { ApartmentType } from "@/sanity/lib/fetch-apartment";
 

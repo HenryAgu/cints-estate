@@ -1,6 +1,5 @@
 "use client";
 import DevelopmentProperties from "@/components/development/development-properties";
-import { Property } from "@/components/home/properties";
 import React from "react";
 import { fetchApartment } from "@/sanity/lib/fetch-apartment";
 import { useQuery } from "@tanstack/react-query";
