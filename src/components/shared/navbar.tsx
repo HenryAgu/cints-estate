@@ -31,7 +31,7 @@ const Navbar = ({ color = "#988261" }: NavbarProps) => {
 
   const handleOpen = () => {
     setShowMenu(true);
-    setTimeout(() => setAnimateMenu(true), 10); 
+    setTimeout(() => setAnimateMenu(true), 10);
   };
 
   const handleClose = () => {
@@ -41,7 +41,7 @@ const Navbar = ({ color = "#988261" }: NavbarProps) => {
 
   return (
     <nav
-      className={`${HelveticaNeue.className} relative px-4 lg:px-10 xl:px-14 2xl:px-20 py-3 lg:py-5 container w-full mx-auto flex items-center justify-between`}
+      className={`${HelveticaNeue.className} relative px-4 lg:px-10 xl:px-14 2xl:px-20 py-3 lg:py-5 container-1 w-full mx-auto flex items-center justify-between`}
       style={{ color }}
     >
       {/* Desktop Nav */}
@@ -59,7 +59,12 @@ const Navbar = ({ color = "#988261" }: NavbarProps) => {
       </ul>
 
       {/* Hamburger Button */}
-      <Button type="button" variant="ghost" className="p-0 block lg:hidden" onClick={handleOpen}>
+      <Button
+        type="button"
+        variant="ghost"
+        className="p-0 block lg:hidden"
+        onClick={handleOpen}
+      >
         <Image
           src="/icons/menu.svg"
           alt="menu_icon"

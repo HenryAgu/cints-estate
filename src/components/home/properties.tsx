@@ -12,7 +12,8 @@ export interface Property {
   image: string;
   title: string;
   address: string;
-  type: "For Sale" | "Forthcoming Development" | "Completed Development";
+  status: "For Sale" | "Forthcoming Development" | "Completed Development";
+  type: string;
   price: string;
   landSize: string;
   noOfBeds: number;
@@ -25,7 +26,8 @@ const properties: Property[] = [
     image: "/images/property.png",
     title: "The Crestwood Estate",
     address: "Surrey Hills, Surrey",
-    type: "For Sale",
+    status: "For Sale",
+    type: "Duplex",
     price: "25,000",
     landSize: "1,800",
     noOfBeds: 4,
@@ -36,7 +38,8 @@ const properties: Property[] = [
     image: "/images/property.png",
     title: "The Crestwood Estate",
     address: "Surrey Hills, Surrey",
-    type: "For Sale",
+    status: "For Sale",
+    type: "Duplex",
     price: "25,000",
     landSize: "1,800",
     noOfBeds: 4,
@@ -47,7 +50,8 @@ const properties: Property[] = [
     image: "/images/property.png",
     title: "The Crestwood Estate",
     address: "Surrey Hills, Surrey",
-    type: "For Sale",
+    status: "For Sale",
+    type: "Duplex",
     price: "25,000",
     landSize: "1,800",
     noOfBeds: 4,
@@ -57,7 +61,7 @@ const properties: Property[] = [
 
 const Properties = () => {
   return (
-    <section className="container w-full mx-auto px-4 lg:px-10 xl:px-14 2xl:px-20 py-10 lg:py-20 xl:py-24">
+    <section className="container-1 w-full mx-auto px-4 lg:px-10 xl:px-14 2xl:px-20 py-10 lg:py-20 xl:py-24">
       <div className="flex flex-col items-center text-center">
         <p
           className={`${HelveticaNeue.className} text-brand-neutral-500 font-normal text-lg lg:text-xl`}
@@ -68,7 +72,7 @@ const Properties = () => {
           Curated Luxury by Cints Estate
         </p>
       </div>
-      <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 md:gap-y-5 lg:gap-y-10 mt-14">
+      <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-5 lg:gap-y-10 mt-14">
         {properties.map((item, index) => (
           <PropertyCard item={item} key={index} />
         ))}

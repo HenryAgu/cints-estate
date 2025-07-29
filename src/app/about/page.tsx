@@ -8,21 +8,21 @@ import KeyService from "@/components/shared/key-service";
 import React from "react";
 
 const AboutPage = () => {
-	return (
-		<main className="min-h-screen container w-full mx-auto font-didot">
-			<Header />
-			<Hero
-				title="About Us"
-				subtitle="We&rsquo;re more than just a property platform, we are your real
+  return (
+    <main className="min-h-screen container-1 w-full mx-auto font-didot">
+      <Header />
+      <Hero
+        title="About Us"
+        subtitle="We&rsquo;re more than just a property platform, we are your real
             estate partner."
-			/>
-			<Testimonial />
-			<MissionVision />
-			<ImageGrid />
-			<KeyService />
-			<MakeRequest />
-		</main>
-	);
+      />
+      <Testimonial />
+      <MissionVision />
+      <ImageGrid />
+      <KeyService />
+      <MakeRequest />
+    </main>
+  );
 };
 
 export default AboutPage;

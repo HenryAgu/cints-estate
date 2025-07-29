@@ -1,9 +1,10 @@
 import React from "react";
 import PropertyCard from "../home/property-card";
 import { Property } from "../home/properties";
+import { ApartmentType } from "@/sanity/lib/fetch-apartment";
 
 interface PropertiesResponse {
-	properties: Property[];
+	properties: ApartmentType[];
 }
 
 const Properties = ({ properties }: PropertiesResponse) => {

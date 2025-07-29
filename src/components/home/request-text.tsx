@@ -19,7 +19,7 @@ const RequestText = () => {
 				investment, we&#39;re here to match you with a property that fits your
 				life and goals.
 			</p>
-			<div className="flex lg:flex-row flex-col gap-y-10 gap-x-10 mt-10">
+			<div className="flex justify-between lg:justify-start gap-x-10 mt-10">
 				<div className="flex flex-col gap-y-3 lg:gap-y-6">
 					<Image
 						src="/icons/chat.svg"
@@ -30,12 +30,12 @@ const RequestText = () => {
 					/>
 					<div className="flex flex-col gap-y-2 lg:gap-y-4">
 						<p
-							className={`${HelveticaNeue.className} text-lg lg:text-xl lg:leading-[140%] font-medium`}
+							className={`${HelveticaNeue.className} text-base lg:text-xl lg:leading-[140%] font-medium`}
 						>
 							Chat Us
 						</p>
 						<p
-							className={`${HelveticaNeue.className} text-lg lg:text-xl lg:leading-[140%] font-medium`}
+							className={`${HelveticaNeue.className} text-base lg:text-xl lg:leading-[140%] font-medium`}
 						>
 							Contact@cintsestate.com
 						</p>
@@ -49,14 +49,14 @@ const RequestText = () => {
 						height={64}
 						className="aspect-square w-10 h-10 lg:w-16 lg:h-w-16"
 					/>
-					<div className="flex flex-col gap-y-4">
+					<div className="flex flex-col gap-y-2 lg:gap-y-4">
 						<p
-							className={`${HelveticaNeue.className} text-lg lg:text-xl lg:leading-[140%] font-medium`}
+							className={`${HelveticaNeue.className} text-base lg:text-xl lg:leading-[140%] font-medium`}
 						>
 							Call Us
 						</p>
 						<p
-							className={`${HelveticaNeue.className} text-lg lg:text-xl lg:leading-[140%] font-medium`}
+							className={`${HelveticaNeue.className} text-base lg:text-xl lg:leading-[140%] font-medium`}
 						>
 							+234 501-801 9595
 						</p>
