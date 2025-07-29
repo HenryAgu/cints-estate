@@ -8,11 +8,14 @@ import React from "react";
 
 const PropertiesLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
-  const isDetailPage = /^\/properties\/[^/]+$/.test(pathname);
+  const isDetailPage =
+    /^\/properties\/[^/]+$/.test(pathname) &&
+    !["/properties/shortlet", "/properties/buy"].includes(pathname);
+
   return (
     <main className="min-h-screen container w-full mx-auto font-didot">
       <Header />
-      {isDetailPage && <Navbar/>}
+      {isDetailPage && <Navbar />}
       {!isDetailPage && <Hero title="Properties" />}
       {!isDetailPage && <FilterHeader />}
       <section>{children}</section>
