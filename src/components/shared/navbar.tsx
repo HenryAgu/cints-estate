@@ -59,7 +59,7 @@ const Navbar = ({ color = "#988261" }: NavbarProps) => {
       </ul>
 
       {/* Hamburger Button */}
-      <Button type="button" variant="ghost" className="p-0" onClick={handleOpen}>
+      <Button type="button" variant="ghost" className="p-0 block lg:hidden" onClick={handleOpen}>
         <Image
           src="/icons/menu.svg"
           alt="menu_icon"
