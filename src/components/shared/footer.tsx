@@ -66,7 +66,7 @@ const nav: Nav[] = [
 const Footer = () => {
   return (
     <footer className="bg-brand-primary-500">
-      <div className="container-1 mx-auto w-full px-4 lg:px-10 xl:px-14 2xl:px-20 py-10 2xl:py-14">
+      <div className=" mx-auto w-full px-4 lg:px-10 xl:px-14 2xl:px-20 py-10 2xl:py-14">
         <div className="flex flex-col lg:items-center gap-y-10">
           <Image
             src="/images/Logo.svg"

@@ -142,7 +142,7 @@
 }
 
 @layer utilities {
-  .container-1 {
-    @apply container mx-auto;
+  .-1 {
+    @apply mx-auto;
   }
 }

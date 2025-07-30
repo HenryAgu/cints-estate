@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import localFont from "next/font/local";
 import React from "react";
 import PropertyCard from "./property-card";
@@ -10,15 +10,13 @@ const HelveticaNeue = localFont({
   src: "../../app/fonts/HelveticaNeueThin.otf",
 });
 
-
-
 const Properties = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["properties", ""], // use a dynamic key if using filters
     queryFn: () => fetchApartment(""), // pass default values
   });
   return (
-    <section className="container-1 w-full mx-auto px-4 lg:px-10 xl:px-14 2xl:px-20 py-10 lg:py-20 xl:py-24">
+    <section className=" w-full mx-auto px-4 lg:px-10 xl:px-14 2xl:px-20 py-10 lg:py-20 xl:py-24">
       <div className="flex flex-col items-center text-center">
         <p
           className={`${HelveticaNeue.className} text-brand-neutral-500 font-normal text-lg lg:text-xl`}

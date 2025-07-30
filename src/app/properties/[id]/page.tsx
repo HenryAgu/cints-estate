@@ -8,7 +8,7 @@ const PropertyDetailsPage = () => {
   const { id } = useParams<{ id: string }>();
   console.log(id);
   return (
-    <main className="min-h-screen container-1 w-full font-didot">
+    <main className="min-h-screen  w-full font-didot">
       <PropertyImageGrid />
       <PropertyDetailsText />
     </main>

@@ -145,7 +145,7 @@ const PropertiesPage = () => {
     queryFn: () => fetchApartment(""), // pass default values
   });
   return (
-    <main className="min-h-screen container-1 w-full mx-auto font-didot">
+    <main className="min-h-screen  w-full mx-auto font-didot">
       <DevelopmentProperties properties={data ?? []} />
     </main>
   );

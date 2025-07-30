@@ -13,7 +13,7 @@ const PropertiesLayout = ({ children }: { children: React.ReactNode }) => {
     !["/properties/shortlet", "/properties/buy"].includes(pathname);
 
   return (
-    <main className="min-h-screen container-1 w-full mx-auto font-didot">
+    <main className="min-h-screen  max-w-4xl w-full mx-auto font-didot">
       <Header />
       {isDetailPage && <Navbar />}
       {!isDetailPage && <Hero title="Properties" />}
