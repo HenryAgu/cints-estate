@@ -140,9 +140,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-@layer utilities {
-  .-1 {
-    @apply mx-auto;
-  }
-}

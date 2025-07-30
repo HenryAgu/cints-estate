@@ -25,8 +25,10 @@ export default function RootLayout({
         className={`${HelveticaNeue.variable} antialiased overflow-x-hidden`}
       >
         <QueryClientProviderWrapper>
-          {children}
-          <Footer />
+          <div className="container w-full mx-auto">
+            {children}
+            <Footer />
+          </div>
         </QueryClientProviderWrapper>
       </body>
     </html>
