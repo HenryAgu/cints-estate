@@ -25,7 +25,7 @@ export default function RootLayout({
         className={`${HelveticaNeue.variable} antialiased overflow-x-hidden`}
       >
         <QueryClientProviderWrapper>
-<div className="w-full mx-auto [@media(min-width:2560px)]:max-w-[1600px]">
+          <div className="w-full mx-auto [@media(min-width:1920px)]:max-w-[1440px]">
             {children}
             <Footer />
           </div>

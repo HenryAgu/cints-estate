@@ -140,3 +140,12 @@
     @apply bg-background text-foreground;
   }
 }
+@media screen and (min-width: 2560px) {
+  .ultrawide-container {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
