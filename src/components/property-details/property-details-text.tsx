@@ -6,7 +6,7 @@ import PropertyInfo from "./property-info";
 const PropertyDetailsText = () => {
   return (
     <section className="mx-4 lg:mx-20 mb-20 ">
-      <div className="flex gap-x-10">
+      <div className="flex lg:flex-row flex-col gap-10">
         <div className="basis-[70%]">
           <PropertyInfo />
         </div>

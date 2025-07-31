@@ -13,10 +13,10 @@ const ContactCard = () => {
       className={`flex flex-col gap-y-7.5 items-center justify-center text-center p-5 bg-[#EBEDEB] border border-[#C0C6C1] rounded-3xl ${HelveticaNeue.className}`}
     >
       <div className="flex flex-col gap-y-3.5">
-        <p className="text-black font-semibold text-[26px] leading-[140%]">
+        <p className="text-black font-semibold text-2xl lg:text-[26px] leading-[140%]">
           Interested in This Property?
         </p>
-        <p className="text-[#414141] font-normal text-lg leading-[140%]">
+        <p className="text-[#414141] font-normal text-base lg:text-lg leading-[140%]">
           Let us help you take the next step
         </p>
       </div>
@@ -29,10 +29,10 @@ const ContactCard = () => {
             src="/icons/phone.svg"
             width={24}
             height={24}
-            className="aspect-square"
+            className="aspect-square w-4 h-4 lg:w-6 lg:h-6"
             alt="phone_icon"
           />
-          <span className="text-white text-lg font-medium leading-[140%]">
+          <span className="text-white text-base lg:text-lg font-medium leading-[140%]">
             Call Agent
           </span>
         </Link>
@@ -44,10 +44,10 @@ const ContactCard = () => {
             src="/icons/mail.svg"
             width={24}
             height={24}
-            className="aspect-square"
+            className="aspect-square w-4 h-4 lg:w-6 lg:h-6"
             alt="mail_icon"
           />
-          <span className="text-[#988261] text-lg font-medium leading-[140%]">
+          <span className="text-[#988261] text-base lg:text-lg font-medium leading-[140%]">
             Request Details
           </span>
         </Link>

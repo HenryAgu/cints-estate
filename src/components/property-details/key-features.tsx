@@ -26,19 +26,19 @@ const KeyFeatures = () => {
   return (
     <section className="mb-10">
       <p
-        className={`${HelveticaNeue.className} text-[#121212] font-semibold text-[23px] leading-[140%]`}
+        className={`${HelveticaNeue.className} text-[#121212] font-semibold text-lg lg:text-[23px] leading-[140%]`}
       >
         Key Features
       </p>
       <div className={`${HelveticaNeue.className} flex gap-x-15`}>
-        <ul className="flex flex-col gap-y-2 mt-5 list-disc ml-5">
+        <ul className="flex flex-col gap-y-1 lg:gap-y-2 mt-2.5 lg:mt-5 list-disc ml-5">
           {leftFeatures.map((item) => (
-            <li className="text-[#121212] font-normal text-lg leading-[160%]" key={item.feature}>{item.feature}</li>
+            <li className="text-[#121212] font-normal text-base lg:text-lg leading-[160%]" key={item.feature}>{item.feature}</li>
           ))}
         </ul>
-        <ul className="flex flex-col gap-y-2 mt-5 list-disc ml-5">
+        <ul className="flex flex-col gap-y-1 lg:gap-y-2 mt-2.5 lg:mt-5 list-disc ml-5">
           {rightFeatures.map((item) => (
-            <li className="text-[#121212] font-normal text-lg leading-[160%]" key={item.feature}>{item.feature}</li>
+            <li className="text-[#121212] font-normal text-base lg:text-lg leading-[160%]" key={item.feature}>{item.feature}</li>
           ))}
         </ul>
       </div>

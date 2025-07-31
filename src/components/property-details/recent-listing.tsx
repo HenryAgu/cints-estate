@@ -40,7 +40,7 @@ const RecentListing = () => {
     );
   }
   return (
-    <div className="px-4 lg:px-20 py-20 bg-[#F6F4F0]">
+    <div className="px-4 lg:px-20 py-10 lg:py-20 bg-[#F6F4F0]">
       <p className="text-brand-neutral-500 font-bold text-[28px] lg:text-[32px] lg:leading-[130%]">
         Recent Listings
       </p>
