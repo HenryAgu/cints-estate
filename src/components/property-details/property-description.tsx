@@ -1,9 +1,106 @@
-import React from 'react'
+import localFont from "next/font/local";
+import Image from "next/image";
+import React from "react";
+
+const HelveticaNeue = localFont({
+  src: "../../app/fonts/HelveticaNeueThin.otf",
+});
 
 const PropertyDescription = () => {
   return (
-    <div>PropertyDescription</div>
-  )
-}
+    <div
+      className={`${HelveticaNeue.className} flex flex-col gap-y-3 max-w-[793px]`}
+    >
+      <p className={`text-[#121212] font-semibold text-[23px] leading-[140%]`}>
+        Property Description
+      </p>
+      <p className="text-[#121212] font-normal text-lg leading-[160%]">
+        Two double-bedroom duplex located on the 5th and 6th floors with
+        panoramic views across the London. This ported development benefits from
+        an underground parking space, three balconies and close proximity to
+        public transport.
+      </p>
+      <div
+        className={`${HelveticaNeue.className} flex justify-between w-full bg-white border border-[#E1E0E0] rounded-3xl p-5 mt-5`}
+      >
+        {/* Council Tax */}
+        <div className="flex flex-col gap-y-3">
+          <div className="flex items-center gap-x-2">
+            <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+              Council Tax
+            </p>
+            <Image
+              src="/icons/info.svg"
+              alt="info_icon"
+              width={18}
+              height={18}
+              className="aspect-square"
+            />
+          </div>
+          <p className="text-[#414141] font-normal text-lg leading-[140%] capitalize">
+            Band A
+          </p>
+        </div>
 
-export default PropertyDescription
+        {/* Parking */}
+        <div className="flex flex-col gap-y-3">
+          <div className="flex items-center gap-x-2">
+            <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+              Parking
+            </p>
+            <Image
+              src="/icons/info.svg"
+              alt="info_icon"
+              width={18}
+              height={18}
+              className="aspect-square"
+            />
+          </div>
+          <p className="text-[#414141] font-normal text-lg leading-[140%] capitalize">
+            Off street
+          </p>
+        </div>
+
+        {/* Garden */}
+        <div className="flex flex-col gap-y-3">
+          <div className="flex items-center gap-x-2">
+            <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+              Garden
+            </p>
+            <Image
+              src="/icons/info.svg"
+              alt="info_icon"
+              width={18}
+              height={18}
+              className="aspect-square"
+            />
+          </div>
+          <p className="text-[#414141] font-normal text-lg leading-[140%] capitalize">
+            Ask agent
+          </p>
+        </div>
+        
+        {/* Accessibility */}
+        <div className="flex flex-col gap-y-3">
+          <div className="flex items-center gap-x-2">
+            <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+              Accessibility
+            </p>
+            <Image
+              src="/icons/info.svg"
+              alt="info_icon"
+              width={18}
+              height={18}
+              className="aspect-square"
+            />
+          </div>
+          <p className="text-[#414141] font-normal text-lg leading-[140%]">
+            Ask Agent
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PropertyDescription;

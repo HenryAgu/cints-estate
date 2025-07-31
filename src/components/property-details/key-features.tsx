@@ -33,12 +33,12 @@ const KeyFeatures = () => {
       <div className={`${HelveticaNeue.className} flex gap-x-15`}>
         <ul className="flex flex-col gap-y-2 mt-5 list-disc ml-5">
           {leftFeatures.map((item) => (
-            <li className="text-[#121212] font-normal text-base leading-[160%]" key={item.feature}>{item.feature}</li>
+            <li className="text-[#121212] font-normal text-lg leading-[160%]" key={item.feature}>{item.feature}</li>
           ))}
         </ul>
         <ul className="flex flex-col gap-y-2 mt-5 list-disc ml-5">
           {rightFeatures.map((item) => (
-            <li className="text-[#121212] font-normal text-base leading-[160%]" key={item.feature}>{item.feature}</li>
+            <li className="text-[#121212] font-normal text-lg leading-[160%]" key={item.feature}>{item.feature}</li>
           ))}
         </ul>
       </div>

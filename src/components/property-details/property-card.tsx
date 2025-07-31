@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Image from "next/image";
 import React from "react";
 
 const HelveticaNeue = localFont({
@@ -41,9 +42,12 @@ const PropertyCard = () => {
       </div>
       {/* Property type */}
       <div className="flex flex-col gap-y-3">
-        <p className="text-[#121212] font-semibold text-lg leading-[140%]">
-          Tenure
-        </p>
+        <div className="flex items-center gap-x-2">
+          <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+            Tenure
+          </p>
+          <Image src="/icons/info.svg" alt="info_icon" width={18} height={18} className="aspect-square"/>
+        </div>
         <p className="text-[#414141] font-normal text-lg leading-[140%]">1</p>
       </div>
     </div>
