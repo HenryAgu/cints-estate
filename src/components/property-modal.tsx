@@ -1,0 +1,36 @@
+import React from "react";
+import { DialogClose, DialogContent, DialogTitle } from "./ui/dialog";
+import Image from "next/image";
+import localFont from "next/font/local";
+// import PropertiesCarousel from "./property-details/properties-carousel";
+
+const HelveticaNeue = localFont({
+    src: "../app/fonts/HelveticaNeueThin.otf",
+});
+
+const PropertyModal = () => {
+  return (
+    <DialogContent>
+      <DialogTitle className="flex items-center justify-between">
+        <div className="flex flex-col gap-y-3.5">
+          <p className="font-didot text-white font-bold text-[28px] leading-[130%]">The Ashford Haven</p>
+          <div className="flex items-center gap-x-2.5">
+            <span className={`${HelveticaNeue.className} text-white`}>Surrey Hills, Surrey</span>
+          </div>
+        </div>
+        <DialogClose asChild className="cursor-pointer">
+          <Image
+            src="/icons/circle-close.svg"
+            alt="close_icon"
+            width={48}
+            height={48}
+            className="aspect-square"
+          />
+        </DialogClose>
+      </DialogTitle>
+      {/* <PropertiesCarousel/> */}
+    </DialogContent>
+  );
+};
+
+export default PropertyModal;

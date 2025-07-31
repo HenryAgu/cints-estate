@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "../ui/button";
 import {
   Dialog,
   DialogContent,
   DialogTitle,
   DialogTrigger,
 } from "../ui/dialog";
+import PropertyModal from "../property-modal";
 
 const gridImages: { src: string; alt: string }[] = [
   { src: "/images/grid2.png", alt: "grid2" },
@@ -18,33 +18,30 @@ const gridImages: { src: string; alt: string }[] = [
 const PropertyImageGrid = () => {
   return (
     <section className="relative lg:mb-10 my-5 md:mt-5 mx-4 lg:mx-20 flex md:flex-row flex-col gap-4 lg:gap-5 h-full">
-      <Dialog>
-        <div className="w-full basis-[50%]">
+      <div className="w-full basis-[50%]">
+        <Image
+          src="/images/grid1.png"
+          alt="grid-image"
+          width={630}
+          height={592}
+          className="aspect-[630/592] w-full h-full"
+        />
+      </div>
+      <div className="w-full basis-[50%] grid grid-cols-2 gap-4 lg:gap-5">
+        {gridImages.map((image, index) => (
           <Image
-            src="/images/grid1.png"
-            alt="grid-image"
-            width={630}
-            height={592}
-            className="aspect-[630/592] w-full h-full"
+            key={index}
+            src={image.src}
+            alt={image.alt}
+            width={309}
+            height={288}
+            className="aspect-square w-full h-full"
           />
-        </div>
-        <div className="w-full basis-[50%] grid grid-cols-2 gap-4 lg:gap-5">
-          {gridImages.map((image, index) => (
-            <Image
-              key={index}
-              src={image.src}
-              alt={image.alt}
-              width={309}
-              height={288}
-              className="aspect-square w-full h-full"
-            />
-          ))}
-        </div>
-        <div className="absolute bottom-4 right-4">
+        ))}
+      </div>
+      <div className="absolute bottom-4 right-4">
+        <Dialog>
           <DialogTrigger>
-            <DialogContent>
-              <DialogTitle>1</DialogTitle>
-            </DialogContent>
             <div className="cursor-pointer flex items-center gap-x-2.5 p-2.5 bg-white rounded-[10px]">
               <Image
                 src="/icons/camera.svg"
@@ -53,11 +50,12 @@ const PropertyImageGrid = () => {
                 alt="camera_icon"
                 className="w-6 h-6 aspect-square"
               />
-              <span>2/7</span>
+              <span>1/7</span>
             </div>
           </DialogTrigger>
-        </div>
-      </Dialog>
+          <PropertyModal />
+        </Dialog>
+      </div>
     </section>
   );
 };
