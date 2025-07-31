@@ -1,0 +1,53 @@
+import localFont from "next/font/local";
+import React from "react";
+
+const HelveticaNeue = localFont({
+  src: "../../app/fonts/HelveticaNeueThin.otf",
+});
+
+const PropertyCard = () => {
+  return (
+    <div
+      className={`${HelveticaNeue.className} flex gap-x-25 bg-white border border-[#E1E0E0] rounded-3xl w-fit p-5 mt-5`}
+    >
+      {/* Property type */}
+      <div className="flex flex-col gap-y-3">
+        <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+          Property Type
+        </p>
+        <p className="text-[#414141] font-normal text-lg leading-[140%]">1</p>
+      </div>
+
+      {/* Property type */}
+      <div className="flex flex-col gap-y-3">
+        <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+          Bedrooms
+        </p>
+        <p className="text-[#414141] font-normal text-lg leading-[140%]">1</p>
+      </div>
+      {/* Property type */}
+      <div className="flex flex-col gap-y-3">
+        <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+          Bathrooms
+        </p>
+        <p className="text-[#414141] font-normal text-lg leading-[140%]">1</p>
+      </div>
+      {/* Property type */}
+      <div className="flex flex-col gap-y-3">
+        <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+          Size
+        </p>
+        <p className="text-[#414141] font-normal text-lg leading-[140%]">1</p>
+      </div>
+      {/* Property type */}
+      <div className="flex flex-col gap-y-3">
+        <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+          Tenure
+        </p>
+        <p className="text-[#414141] font-normal text-lg leading-[140%]">1</p>
+      </div>
+    </div>
+  );
+};
+
+export default PropertyCard;
