@@ -1,8 +1,17 @@
+import localFont from 'next/font/local';
 import React from 'react'
+
+const HelveticaNeue = localFont({
+  src: "../../app/fonts/HelveticaNeueThin.otf",
+});
+
 
 const Location = () => {
   return (
-    <div>Location</div>
+    <section className='mt-10'>
+      <p className={`${HelveticaNeue.className} text-[#121212] font-semibold text-[23px] leading-[140%]`}>Location</p>
+      <div className="w-full h-[816px] rounded-[20px] bg-black mt-5"/>
+    </section>
   )
 }
 
