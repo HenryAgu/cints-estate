@@ -24,7 +24,7 @@ const LeaseHold = () => {
         {/* Ground Rent */}
         <div className="flex flex-col gap-y-1.5 lg:gap-y-3">
           <div className="flex items-center gap-x-2">
-            <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+            <p className="text-[#121212] font-semibold text-base lg:text-lg leading-[140%]">
               Ground Rent
             </p>
             <Image
@@ -35,7 +35,7 @@ const LeaseHold = () => {
               className="aspect-square"
             />
           </div>
-          <p className="text-[#414141] font-normal text-lg leading-[140%] capitalize">
+          <p className="text-[#414141] font-normal text-base lg:text-lg leading-[140%] capitalize">
             Band A
           </p>
         </div>
@@ -43,7 +43,7 @@ const LeaseHold = () => {
         {/* Annual Service Charge */}
         <div className="flex flex-col gap-y-1.5 lg:gap-y-3">
           <div className="flex items-center gap-x-2">
-            <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+            <p className="text-[#121212] font-semibold text-base lg:text-lg leading-[140%]">
               Annual Service Charge
             </p>
             <Image
@@ -54,7 +54,7 @@ const LeaseHold = () => {
               className="aspect-square"
             />
           </div>
-          <p className="text-[#414141] font-normal text-lg leading-[140%] capitalize">
+          <p className="text-[#414141] font-normal text-base lg:text-lg leading-[140%] capitalize">
             Off street
           </p>
         </div>
@@ -62,7 +62,7 @@ const LeaseHold = () => {
         {/* Length of Lease */}
         <div className="flex flex-col gap-y-1.5 lg:gap-y-3">
           <div className="flex items-center gap-x-2">
-            <p className="text-[#121212] font-semibold text-lg leading-[140%]">
+            <p className="text-[#121212] font-semibold text-base lg:text-lg leading-[140%]">
               Length of Lease
             </p>
             <Image
@@ -73,7 +73,7 @@ const LeaseHold = () => {
               className="aspect-square"
             />
           </div>
-          <p className="text-[#414141] font-normal text-lg leading-[140%]">
+          <p className="text-[#414141] font-normal text-base lg:text-lg leading-[140%]">
             Ask Agent
           </p>
         </div>
