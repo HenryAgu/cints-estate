@@ -10,7 +10,7 @@ const HelveticaNeue = localFont({
 const ContactCard = () => {
   return (
     <aside
-      className={`flex flex-col gap-y-7.5 items-center justify-center text-center p-5 bg-[#EBEDEB] border border-[#C0C6C1] rounded-3xl ${HelveticaNeue.className}`}
+      className={`w-full flex flex-col gap-y-7.5 items-center justify-center text-center p-5 bg-[#EBEDEB] border border-[#C0C6C1] rounded-3xl ${HelveticaNeue.className}`}
     >
       <div className="flex flex-col gap-y-3.5">
         <p className="text-black font-semibold text-2xl lg:text-[26px] leading-[140%]">
@@ -23,7 +23,7 @@ const ContactCard = () => {
       <div className="flex flex-col gap-y-2.5">
         <Link
           href="tel:+2345018019595"
-          className="py-2.5 px-8 rounded-[60px] flex items-center justify-center gap-x-2 bg-brand-secondary-500"
+          className="py-2.5 lg:px-8 rounded-[60px] flex items-center justify-center gap-x-2 bg-brand-secondary-500"
         >
           <Image
             src="/icons/phone.svg"

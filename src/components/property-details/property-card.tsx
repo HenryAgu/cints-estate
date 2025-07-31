@@ -9,7 +9,7 @@ const HelveticaNeue = localFont({
 const PropertyCard = () => {
   return (
     <div
-      className={`${HelveticaNeue.className} grid grid-cols-1 gap-5 lg:flex  lg:gap-25 bg-white border border-[#E1E0E0] rounded-3xl lg:w-fit p-5 mt-5`}
+      className={`${HelveticaNeue.className} grid grid-cols-2 gap-5 lg:flex  lg:gap-25 bg-white border border-[#E1E0E0] rounded-3xl lg:w-fit p-5 mt-5`}
     >
       {/* Property type */}
       <div className="flex flex-col gap-y-1.5 lg:gap-y-3">
