@@ -24,7 +24,7 @@ const PropertyModal = () => {
             alt="close_icon"
             width={48}
             height={48}
-            className="aspect-square"
+            className="aspect-square w-10 h-10 lg:w-12 lg:h-12"
           />
         </DialogClose>
       </DialogTitle>
