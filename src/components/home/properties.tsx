@@ -5,6 +5,7 @@ import PropertyCard from "./property-card";
 import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
 import { fetchApartment } from "@/sanity/lib/fetch-apartment";
+import PropertiesSkeleton from "../shared/properties-skeleton";
 
 const HelveticaNeue = localFont({
   src: "../../app/fonts/HelveticaNeueThin.otf",
@@ -15,6 +16,31 @@ const Properties = () => {
     queryKey: ["properties", ""], // use a dynamic key if using filters
     queryFn: () => fetchApartment(""), // pass default values
   });
+
+  if (isLoading) {
+    return (
+      <div className=" w-full mx-auto px-4 lg:px-10 xl:px-14 2xl:px-20 py-10 lg:py-20 xl:py-24">
+        <div className="flex flex-col items-center text-center">
+          <p
+            className={`${HelveticaNeue.className} text-brand-neutral-500 font-normal text-lg lg:text-xl`}
+          >
+            Properties
+          </p>
+          <p className="text-3xl lg:text-[40px] font-bold leading-[130%]">
+            Curated Luxury by Cints Estate
+          </p>
+        </div>
+        <PropertiesSkeleton />
+      </div>
+    );
+  }
+  if(error){
+    return(
+      <section className="flex items-center justify-center py-10 lg:py-20 xl:py-24">
+        <p>Error</p>
+      </section>
+    )
+  }
   return (
     <section className=" w-full mx-auto px-4 lg:px-10 xl:px-14 2xl:px-20 py-10 lg:py-20 xl:py-24">
       <div className="flex flex-col items-center text-center">

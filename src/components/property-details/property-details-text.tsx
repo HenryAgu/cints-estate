@@ -1,12 +1,13 @@
 import React from "react";
+import ContactCard from "./contact-card";
 
 const PropertyDetailsText = () => {
   return (
-    <section className="mx-4 lg:mx-20 mb-20">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis
-      distinctio exercitationem cum molestias asperiores quas sint ducimus nemo
-      facilis eveniet quibusdam impedit tempora a, fugiat, dolor, est libero
-      alias?
+    <section className="mx-4 lg:mx-20 mb-20 flex gap-x-10">
+      <div className="basis-[70%]">1</div>
+      <div className="basis-[30%]">
+        <ContactCard />
+      </div>
     </section>
   );
 };
