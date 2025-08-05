@@ -4,13 +4,13 @@ import Navbar from "@/components/shared/navbar";
 import React from "react";
 
 const BuyPage = () => {
-  return (
-    <main className="min-h-screen font-didot">
-      <Header />
-      <Navbar />
-      <BuyProperties />
-    </main>
-  );
+	return (
+		<main className="min-h-screen font-didot">
+			<Header />
+			<Navbar />
+			<BuyProperties />
+		</main>
+	);
 };
 
 export default BuyPage;

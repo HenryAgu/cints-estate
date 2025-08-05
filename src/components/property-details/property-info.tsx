@@ -7,16 +7,16 @@ import SpaciousLiving from "./spacious-living";
 import OutdoorOasis from "./outdoor-oasis";
 
 const PropertyInfo = () => {
-  return (
-    <section className="flex flex-col">
-      <PropertyHeader />
-      <KeyFeatures/>
-      <PropertyDescription/>
-      <LeaseHold/>
-      <SpaciousLiving/>
-      <OutdoorOasis/>
-    </section>
-  );
+	return (
+		<section className="flex flex-col">
+			<PropertyHeader />
+			<KeyFeatures />
+			<PropertyDescription />
+			<LeaseHold />
+			<SpaciousLiving />
+			<OutdoorOasis />
+		</section>
+	);
 };
 
 export default PropertyInfo;

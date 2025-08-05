@@ -14,7 +14,10 @@ interface PropertyCardResponse {
 
 const PropertyCard = ({ item }: PropertyCardResponse) => {
 	return (
-		<Link href={`/properties/${item.slug.current}`} className="border border-[#E4DCD1] rounded-[20px] p-3 xl:p-5 flex flex-col gap-y-5">
+		<Link
+			href={`/properties/${item.slug.current}`}
+			className="border border-[#E4DCD1] rounded-[20px] p-3 xl:p-5 flex flex-col gap-y-5"
+		>
 			<Image
 				src={item.image?.asset?.url}
 				alt="property"

@@ -1,10 +1,8 @@
-import ShortletProperties from '@/components/shortlet/shortletProperties'
-import React from 'react'
+import ShortletProperties from "@/components/shortlet/shortletProperties";
+import React from "react";
 
 const page = () => {
-  return (
-    <ShortletProperties/>
-  )
-}
+	return <ShortletProperties />;
+};
 
-export default page
+export default page;

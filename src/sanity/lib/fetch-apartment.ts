@@ -1,43 +1,43 @@
 import { client } from "@/sanity/lib/client";
 
 export type ApartmentType = {
-  type: string;
-  slug: {
-    _type: "slug";
-    current: string;
-  };
-  title: string;
-  house: Array<{
-    title: string;
-  }>;
-  status: string;
-  price: string;
-  noOfBaths: number;
-  noOfBeds: number;
-  landSize: string;
-  location: string;
-  image: {
-    asset: {
-      url: string;
-    };
-    alt?: string;
-  };
-  images: {
-    asset: {
-      url: string;
-    };
-    alt?: string;
-  }[];
+	type: string;
+	slug: {
+		_type: "slug";
+		current: string;
+	};
+	title: string;
+	house: Array<{
+		title: string;
+	}>;
+	status: string;
+	price: string;
+	noOfBaths: number;
+	noOfBeds: number;
+	landSize: string;
+	location: string;
+	image: {
+		asset: {
+			url: string;
+		};
+		alt?: string;
+	};
+	images: {
+		asset: {
+			url: string;
+		};
+		alt?: string;
+	}[];
 };
 
 export const fetchApartment = async (
-  searchQuery: string
+	searchQuery: string,
 ): Promise<ApartmentType[]> => {
-  const searchFilter = searchQuery
-    ? `&& (title match "*${searchQuery}*" || location match "*${searchQuery}*")`
-    : "";
+	const searchFilter = searchQuery
+		? `&& (title match "*${searchQuery}*" || location match "*${searchQuery}*")`
+		: "";
 
-  const query = `*[_type == "apartment" ${searchFilter}] 
+	const query = `*[_type == "apartment" ${searchFilter}] 
     | order(_createdAt desc) { 
       type,
       slug,
@@ -65,5 +65,5 @@ export const fetchApartment = async (
       }
     }`;
 
-  return await client.fetch(query);
+	return await client.fetch(query);
 };
