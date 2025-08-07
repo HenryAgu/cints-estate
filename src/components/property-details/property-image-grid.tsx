@@ -19,7 +19,7 @@ const PropertyImageGrid = ({ apartment }: ApartmentResponse) => {
           alt="grid-image"
           width={630}
           height={592}
-          className="aspect-[630/592] w-full h-full rounded-3xl"
+          className="aspect-[630/592] w-full h-full rounded-3xl object-cover"
         />
       </div>
       <div className="w-full basis-[50%] grid grid-cols-2 gap-4 lg:gap-5">
@@ -30,7 +30,7 @@ const PropertyImageGrid = ({ apartment }: ApartmentResponse) => {
             alt="images"
             width={309}
             height={288}
-            className="aspect-square w-full h-full rounded-3xl"
+            className="aspect-square w-full h-full rounded-3xl object-cover"
           />
         ))}
       </div>
