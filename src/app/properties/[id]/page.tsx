@@ -8,19 +8,21 @@ type Props = {
   };
 };
 
-export async function generateMetadata(
-  { params }: Props
-): Promise<Metadata> {
+// Generate metadata for the page
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const apartment = await fetchApartmentBySlug(params.id);
 
-  if (!apartment) return { title: "Apartment not found" };
+  if (!apartment) {
+    return { title: "Apartment not found" };
+  }
 
   return {
-    title: `${apartment.title} | CandyMan Properties`,
+    title: `${apartment.title} | Cints Estate`,
     description: apartment.subtitle ?? "Apartment details",
   };
 }
 
+// Default page component
 export default function PropertyDetailsPage({ params }: Props) {
   return <PropertyDetailsClient id={params.id} />;
 }
