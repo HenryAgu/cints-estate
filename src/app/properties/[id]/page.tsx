@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import PropertyDetailsClient from "@/components/property-details/property-details-client";
 import { fetchApartmentBySlug } from "@/sanity/lib/fetch-apartment";
 
@@ -7,7 +8,9 @@ type Props = {
   };
 };
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata(
+  { params }: Props
+): Promise<Metadata> {
   const apartment = await fetchApartmentBySlug(params.id);
 
   if (!apartment) return { title: "Apartment not found" };
