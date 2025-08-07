@@ -1,28 +1,44 @@
-import { Metadata } from "next";
-import PropertyDetailsClient from "@/components/property-details/property-details-client";
+"use client";
+import PropertyDetailsText from "@/components/property-details/property-details-text";
+import PropertyImageGrid from "@/components/property-details/property-image-grid";
+import RecentListing from "@/components/property-details/recent-listing";
 import { fetchApartmentBySlug } from "@/sanity/lib/fetch-apartment";
+import { useQuery } from "@tanstack/react-query";
+import { useParams } from "next/navigation";
+import Head from "next/head";
+import React from "react";
 
-type Props = {
-  params: {
-    id: string;
-  };
+const PropertyDetailsPage = () => {
+  const { id } = useParams<{ id: string }>();
+
+  const {
+    data: apartment,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["cars", id],
+    queryFn: () => fetchApartmentBySlug(id as string),
+    enabled: !!id,
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Something went wrong.</div>;
+  if (!apartment) return <div>Apartment not found.</div>;
+
+  return (
+    <>
+      <Head>
+        <title>{apartment.title} | Cints estate</title>
+        <meta name="description" content={apartment.subtitle ?? "Apartment details"} />
+      </Head>
+
+      <main className="min-h-screen w-full font-didot mb-12 lg:mb-24">
+        <PropertyImageGrid apartment={apartment} />
+        <PropertyDetailsText apartment={apartment} />
+        <RecentListing />
+      </main>
+    </>
+  );
 };
 
-// Generate metadata for the page
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const apartment = await fetchApartmentBySlug(params.id);
-
-  if (!apartment) {
-    return { title: "Apartment not found" };
-  }
-
-  return {
-    title: `${apartment.title} | Cints Estate`,
-    description: apartment.subtitle ?? "Apartment details",
-  };
-}
-
-// Default page component
-export default function PropertyDetailsPage({ params }: Props) {
-  return <PropertyDetailsClient id={params.id} />;
-}
+export default PropertyDetailsPage;
