@@ -8,6 +8,12 @@ const HelveticaNeue = localFont({
 });
 
 const PropertyDescription = ({ apartment }: ApartmentResponse) => {
+  const accessibilityTitles: Record<string, string> = {
+    wheelchair: "Wheelchair Accessible",
+    step_free: "Step-Free Access",
+    elevator: "Elevator",
+    ground_floor: "Ground Floor",
+  };
   return (
     <div
       className={`${HelveticaNeue.className} flex flex-col gap-y-1.5 lg:gap-y-3 max-w-[793px]`}
@@ -38,7 +44,7 @@ const PropertyDescription = ({ apartment }: ApartmentResponse) => {
             />
           </div>
           <p className="text-[#414141] font-normal text-base lg:text-lg leading-[140%] capitalize">
-            {apartment?.councilTax ?? "Ask Agent"}
+            Band {apartment?.councilTax ?? "Ask Agent"}
           </p>
         </div>
 
@@ -95,7 +101,9 @@ const PropertyDescription = ({ apartment }: ApartmentResponse) => {
             />
           </div>
           <p className="text-[#414141] font-normal text-base lg:text-lg leading-[140%]">
-            {apartment?.accessibility ?? "Ask Agent"}
+            {apartment?.accessibility?.[0]
+              ? (accessibilityTitles[apartment.accessibility[0]] ?? "Ask Agent")
+              : "Ask Agent"}
           </p>
         </div>
       </div>

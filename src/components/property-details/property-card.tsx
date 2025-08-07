@@ -17,7 +17,7 @@ const PropertyCard = ({ apartment }: ApartmentResponse) => {
         <p className="text-[#121212] font-semibold text-base lg:text-lg leading-[140%]">
           Property Type
         </p>
-        <p className="text-[#414141] font-normal text-base lg:text-lg leading-[140%]">
+        <p className="text-[#414141] font-normal text-base lg:text-lg leading-[140%] capitalize">
           {apartment?.ownershipType ?? "Ask Agent"}
         </p>
       </div>

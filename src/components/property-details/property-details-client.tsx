@@ -22,7 +22,12 @@ const PropertyDetailsClient = ({ id }: Props) => {
   });
 
   if (isLoading) return <div>Loading...</div>;
-  if (error || !apartment) return <div>Something went wrong.</div>;
+  if (error || !apartment)
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <p className="text-4xl font-black">Something went wrong...</p>
+      </div>
+    );
 
   return (
     <main className="min-h-screen w-full font-didot mb-12 lg:mb-24">

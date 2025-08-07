@@ -16,7 +16,7 @@ const SpaciousLiving = ({ apartment }: ApartmentResponse) => {
       >
         Spacious Living
       </p>
-      <p className="text-[#121212] font-normal text-base lg:text-lg leading-[160%]">
+      <p className="text-[#121212] font-normal text-base lg:text-lg leading-[160%] capitalize">
         {apartment?.spaciousLiving ?? "N/A"}
       </p>
     </div>

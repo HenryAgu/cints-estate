@@ -39,7 +39,10 @@ const LeaseHold = ({ apartment }: ApartmentResponse) => {
             />
           </div>
           <p className="text-[#414141] font-normal text-base lg:text-lg leading-[140%] capitalize">
-            {apartment?.groundRent ?? "N/A"}
+            {new Intl.NumberFormat("en-GB", {
+              style: "currency",
+              currency: "GBP",
+            }).format(apartment?.groundRent || 0)}
           </p>
         </div>
 
