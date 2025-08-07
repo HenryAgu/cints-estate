@@ -1,9 +1,8 @@
-// components/shared/MapView.tsx
 "use client";
 
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import L from "leaflet";
+import L, { Icon } from "leaflet";
 import { useEffect } from "react";
 
 // Fix leaflet marker icons
@@ -14,14 +13,24 @@ interface MapViewProps {
   location: string;
 }
 
+// Extend the Icon.Default interface to include _getIconUrl
+interface CustomIconDefault extends L.Icon.Default {
+  _getIconUrl?: () => string;
+}
+
 const MapView = ({ coords, location }: MapViewProps) => {
   useEffect(() => {
-    delete (L.Icon.Default.prototype as any)._getIconUrl;
+    const defaultIcon = L.Icon.Default.prototype as CustomIconDefault;
+
+    // Safely delete _getIconUrl if it exists
+    if (defaultIcon._getIconUrl) {
+      delete defaultIcon._getIconUrl;
+    }
 
     L.Icon.Default.mergeOptions({
-      iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
-      iconUrl: require("leaflet/dist/images/marker-icon.png"),
-      shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
+      iconRetinaUrl: new URL("leaflet/dist/images/marker-icon-2x.png", import.meta.url).href,
+      iconUrl: new URL("leaflet/dist/images/marker-icon.png", import.meta.url).href,
+      shadowUrl: new URL("leaflet/dist/images/marker-shadow.png", import.meta.url).href,
     });
   }, []);
 
