@@ -7,6 +7,11 @@ import Header from "@/components/shared/header";
 import KeyService from "@/components/shared/key-service";
 import React from "react";
 
+export const metadata = {
+  title: "About Us",
+  description: "Explore our courses",
+};
+
 const AboutPage = () => {
 	return (
 		<main className="min-h-screen  w-full mx-auto font-didot">

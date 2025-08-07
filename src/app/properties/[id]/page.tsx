@@ -2,19 +2,35 @@
 import PropertyDetailsText from "@/components/property-details/property-details-text";
 import PropertyImageGrid from "@/components/property-details/property-image-grid";
 import RecentListing from "@/components/property-details/recent-listing";
+import { fetchApartmentBySlug } from "@/sanity/lib/fetch-apartment";
+import { useQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
 import React from "react";
 
 const PropertyDetailsPage = () => {
-	const { id } = useParams<{ id: string }>();
-	console.log(id);
-	return (
-		<main className="min-h-screen w-full font-didot mb-12 lg:mb-24">
-			<PropertyImageGrid />
-			<PropertyDetailsText />
-			<RecentListing />
-		</main>
-	);
+  const { id } = useParams<{ id: string }>();
+
+  const {
+    data: apartment,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["cars", id],
+    queryFn: () => fetchApartmentBySlug(id as string),
+    enabled: !!id,
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Something went wrong.</div>;
+  if (!apartment) return <div>Apartment not found.</div>;
+
+  return (
+    <main className="min-h-screen w-full font-didot mb-12 lg:mb-24">
+      <PropertyImageGrid apartment={apartment} />
+      <PropertyDetailsText apartment={apartment} />
+      <RecentListing />
+    </main>
+  );
 };
 
 export default PropertyDetailsPage;
