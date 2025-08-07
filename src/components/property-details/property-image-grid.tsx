@@ -48,7 +48,7 @@ const PropertyImageGrid = ({ apartment }: ApartmentResponse) => {
               <span>1/7</span>
             </div>
           </DialogTrigger>
-          <PropertyModal />
+          <PropertyModal apartment={apartment}/>
         </Dialog>
       </div>
     </section>

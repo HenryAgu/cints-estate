@@ -7,23 +7,17 @@ import {
   CarouselPrevious,
 } from "../ui/carousel";
 import Image from "next/image";
+import { ApartmentResponse } from "../type";
 
-const images: string[] = [
-  "/images/background2.png",
-  "/images/background.png",
-  "/images/background2.png",
-  "/images/background.png",
-];
-
-const PropertiesCarousel = () => {
+const PropertiesCarousel = ({ apartment }: ApartmentResponse) => {
   return (
     <Carousel className="w-full 2xl:w-[95%] mx-auto">
       <CarouselContent>
-        {images.map((image, index) => (
+        {apartment?.images.map((image, index) => (
           <CarouselItem key={index} className="my-10 ">
             <div className="flex items-center justify-center rounded-xl">
               <Image
-                src={image}
+                src={image?.asset?.url ?? "/images/background2.png"}
                 alt={`image ${index + 1}`}
                 width={949}
                 height={704}
@@ -36,8 +30,8 @@ const PropertiesCarousel = () => {
         ))}
       </CarouselContent>
       <div className="hidden lg:flex">
-        <CarouselPrevious/>
-        <CarouselNext/>
+        <CarouselPrevious />
+        <CarouselNext />
       </div>
       <div className="flex lg:hidden py-20">
         <CarouselPrevious className="top-80 size-10 left-2" />
