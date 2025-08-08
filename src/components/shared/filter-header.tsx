@@ -18,6 +18,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import {
+	ApartmentType,
   fetchApartmentType,
   fetchSearchResults,
 } from "@/sanity/lib/fetch-apartment";
@@ -77,7 +78,7 @@ const FilterHeader = () => {
     enabled: false, // Don't fetch on mount
   });
 
-  console.log(searchResults)
+  console.log(searchResults);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -177,8 +178,8 @@ const FilterHeader = () => {
         <div className="mt-4">
           <h2 className="font-semibold mb-2">Search Results:</h2>
           <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-5 lg:gap-y-10 mt-14">
-            {searchResults.map((item: any, i: number) => (
-              <PropertyCard item={item} key={item}/>
+            {searchResults.map((item: ApartmentType, i: number) => (
+              <PropertyCard item={item} key={item.slug.current} />
             ))}
           </div>
         </div>
