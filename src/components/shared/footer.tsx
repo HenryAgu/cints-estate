@@ -51,7 +51,7 @@ const nav: Nav[] = [
 	},
 	{
 		title: "List a Property",
-		path: "/about",
+		path: "/contact",
 	},
 	{
 		title: "Terms of Use",

@@ -78,8 +78,6 @@ const FilterHeader = () => {
     enabled: false, // Don't fetch on mount
   });
 
-  console.log(searchResults);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     refetch();
