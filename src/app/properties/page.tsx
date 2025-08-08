@@ -14,7 +14,7 @@ const PropertiesPage = () => {
   if (isLoading) {
     return (
       <div className="mx-4 lg:mx-10 xl:mx-14 2xl:mx-20 mb-10">
-        <PropertiesSkeleton />;
+        <PropertiesSkeleton />
       </div>
     );
   }

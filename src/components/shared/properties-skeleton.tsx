@@ -1,6 +1,5 @@
 import React from "react";
 import { Skeleton } from "../ui/skeleton";
-import localFont from "next/font/local";
 
 const PropertiesSkeleton = () => {
   return (
