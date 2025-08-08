@@ -4,7 +4,7 @@ import PropertyImageGrid from "@/components/property-details/property-image-grid
 import RecentListing from "@/components/property-details/recent-listing";
 import { fetchApartmentBySlug } from "@/sanity/lib/fetch-apartment";
 import { useQuery } from "@tanstack/react-query";
-import { useParams } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import Head from "next/head";
 import React from "react";
 import PropetiesDetailsSkeleton from "@/components/property-details/propeties-details-skeleton";
@@ -23,8 +23,8 @@ const PropertyDetailsPage = () => {
   });
 
   if (isLoading) return <PropetiesDetailsSkeleton />;
-  if (error) return <div>Something went wrong.</div>;
-  if (!apartment) return <div>Apartment not found.</div>;
+  if (error) return notFound();
+  if (!apartment) return notFound();
 
   return (
     <>
