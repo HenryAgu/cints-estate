@@ -46,6 +46,59 @@ export type ApartmentType = {
   email: string;
 };
 
+export const fetchSearchResults = async (
+  address: string,
+  noOfBedrooms: number | "",
+  apartmentType: string
+): Promise<ApartmentType[]> => {
+  const filters = [];
+
+  if (address) {
+    filters.push(`location match "*${address}*"`);
+  }
+
+  if (typeof noOfBedrooms === "number") {
+    filters.push(`noOfBeds == ${noOfBedrooms}`);
+  }
+
+  if (apartmentType) {
+    filters.push(`"${apartmentType}" in house[]->title`);
+  }
+
+  const filterQuery = filters.length > 0 ? `&& ${filters.join(" && ")}` : "";
+
+  const query = `*[_type == "apartment" ${filterQuery}]
+    | order(_createdAt desc) {
+      type,
+      slug,
+      title,
+      house[]->{
+        title
+      },
+      status,
+      price,
+      noOfBaths,
+      noOfBeds,
+      landSize,
+      location,
+      image {
+        asset->{
+          url
+        },
+        alt
+      },
+      images[] {
+        asset->{
+          url
+        },
+        alt
+      }
+    }`;
+
+  return await client.fetch(query);
+};
+
+
 export const fetchApartment = async (
 	searchQuery: string,
 ): Promise<ApartmentType[]> => {
