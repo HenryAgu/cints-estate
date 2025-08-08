@@ -84,6 +84,14 @@ export const fetchApartment = async (
 	return await client.fetch(query);
 };
 
+export const fetchApartmentType = async (): Promise<string[]> => {
+  const query = `*[_type == "house"] | order(title asc) {
+    title
+  }`;
+
+  const types: { title: string }[] = await client.fetch(query);
+  return types.map((type) => type.title);
+};
 
 export const fetchApartmentBySlug = async (
   slug: string

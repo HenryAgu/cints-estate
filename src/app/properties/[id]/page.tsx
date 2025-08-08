@@ -17,7 +17,7 @@ const PropertyDetailsPage = () => {
     isLoading,
     error,
   } = useQuery({
-    queryKey: ["cars", id],
+    queryKey: ["apartments", id],
     queryFn: () => fetchApartmentBySlug(id as string),
     enabled: !!id,
   });
