@@ -83,7 +83,7 @@ const FilterHeader = ({ apartmentTypes }: FilterHeaderProps) => {
               <SelectGroup>
                 <SelectLabel>House Type</SelectLabel>
                 {apartmentTypes?.map((item) => (
-                  <SelectItem value={item}>{item}</SelectItem>
+                  <SelectItem value={item} key={item}>{item}</SelectItem>
                 ))}
               </SelectGroup>
             </SelectContent>
