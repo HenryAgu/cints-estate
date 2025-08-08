@@ -4,8 +4,9 @@ import localFont from "next/font/local";
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { ApartmentResponse } from "../type";
+import MapSkeleton from "../map/map-skeleton";
 
-const MapView = dynamic(() => import("./map-view"), {
+const MapView = dynamic(() => import("../map/map-view"), {
   ssr: false,
 });
 
@@ -60,7 +61,7 @@ const Location = ({ apartment }: ApartmentResponse) => {
         {coords ? (
           <MapView coords={coords} location={apartment.location} />
         ) : (
-          <div className="text-center text-gray-500 pt-10">Loading map...</div>
+          <MapSkeleton/>
         )}
       </div>
     </section>

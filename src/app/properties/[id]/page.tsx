@@ -7,6 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";
 import Head from "next/head";
 import React from "react";
+import PropetiesDetailsSkeleton from "@/components/property-details/propeties-details-skeleton";
 
 const PropertyDetailsPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -21,7 +22,7 @@ const PropertyDetailsPage = () => {
     enabled: !!id,
   });
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <PropetiesDetailsSkeleton />;
   if (error) return <div>Something went wrong.</div>;
   if (!apartment) return <div>Apartment not found.</div>;
 
@@ -29,7 +30,10 @@ const PropertyDetailsPage = () => {
     <>
       <Head>
         <title>{apartment.title} | Cints estate</title>
-        <meta name="description" content={apartment.subtitle ?? "Apartment details"} />
+        <meta
+          name="description"
+          content={apartment.subtitle ?? "Apartment details"}
+        />
       </Head>
 
       <main className="min-h-screen w-full font-didot mb-12 lg:mb-24">
