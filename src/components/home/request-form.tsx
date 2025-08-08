@@ -9,6 +9,7 @@ import { Textarea } from "../ui/textarea";
 import z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "sonner";
 
 const HelveticaNeue = localFont({
   src: "../../app/fonts/HelveticaNeueThin.otf",
@@ -38,6 +39,7 @@ const RequestForm = () => {
 
   const onSubmit = (data: RequestFormData) => {
     console.log("Submitted Data:", data);
+	toast.success("Your request has been submitted successfully!");
     reset();
   };
   return (
