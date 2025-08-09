@@ -37,10 +37,27 @@ const ContactForm = () => {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log("Submitted Data:", data);
-    toast.success("Your message has been sent successfully!");
-    reset();
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      const response = await fetch(
+        `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (response.ok) {
+        toast.success("Your message has been sent successfully!");
+        reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast.error("Something went wrong. Please try again later.");
+    }
   };
 
   return (
@@ -50,10 +67,7 @@ const ContactForm = () => {
     >
       {/* Name */}
       <div className="w-full flex flex-col gap-y-1.5">
-        <Label
-          htmlFor="name"
-          className="text-black text-base lg:text-lg font-semibold leading-[140%]"
-        >
+        <Label htmlFor="name" className="text-black text-base lg:text-lg font-semibold leading-[140%]">
           Full Name (required)
         </Label>
         <Input
@@ -63,17 +77,12 @@ const ContactForm = () => {
           {...register("name")}
           className="border border-[#D4D4D4] rounded-[10px] text-brand-secondary-600 text-base lg:text-lg font-normal leading-[140%] py-4.5 lg:py-6.5 px-3.5"
         />
-        {errors.name && (
-          <p className="text-red-500 text-sm">{errors.name.message}</p>
-        )}
+        {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
       </div>
 
       {/* Email */}
       <div className="w-full flex flex-col gap-y-1.5">
-        <Label
-          htmlFor="email"
-          className="text-black text-base lg:text-lg font-semibold leading-[140%]"
-        >
+        <Label htmlFor="email" className="text-black text-base lg:text-lg font-semibold leading-[140%]">
           Email Address (required)
         </Label>
         <Input
@@ -83,17 +92,12 @@ const ContactForm = () => {
           {...register("email")}
           className="border border-[#D4D4D4] rounded-[10px] text-brand-secondary-600 text-base lg:text-lg font-normal leading-[140%] py-4.5 lg:py-6.5 px-3.5"
         />
-        {errors.email && (
-          <p className="text-red-500 text-sm">{errors.email.message}</p>
-        )}
+        {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
       </div>
 
       {/* Subject */}
       <div className="w-full flex flex-col gap-y-1.5">
-        <Label
-          htmlFor="subject"
-          className="text-black text-base lg:text-lg font-semibold leading-[140%]"
-        >
+        <Label htmlFor="subject" className="text-black text-base lg:text-lg font-semibold leading-[140%]">
           Subject (required)
         </Label>
         <Input
@@ -103,17 +107,12 @@ const ContactForm = () => {
           {...register("subject")}
           className="border border-[#D4D4D4] rounded-[10px] text-brand-secondary-600 text-base lg:text-lg font-normal leading-[140%] py-4.5 lg:py-6.5 px-3.5"
         />
-        {errors.subject && (
-          <p className="text-red-500 text-sm">{errors.subject.message}</p>
-        )}
+        {errors.subject && <p className="text-red-500 text-sm">{errors.subject.message}</p>}
       </div>
 
       {/* Inquiry */}
       <div className="w-full flex flex-col gap-y-1.5">
-        <Label
-          htmlFor="inquiry"
-          className="text-black text-base lg:text-lg font-semibold leading-[140%]"
-        >
+        <Label htmlFor="inquiry" className="text-black text-base lg:text-lg font-semibold leading-[140%]">
           Detailed Inquiry
         </Label>
         <Textarea
@@ -122,9 +121,7 @@ const ContactForm = () => {
           {...register("inquiry")}
           className="resize-none h-[257px] w-full border border-[#D4D4D4] rounded-[10px] text-brand-secondary-600 text-base lg:text-lg font-normal leading-[140%] py-4.5 px-3.5"
         />
-        {errors.inquiry && (
-          <p className="text-red-500 text-sm">{errors.inquiry.message}</p>
-        )}
+        {errors.inquiry && <p className="text-red-500 text-sm">{errors.inquiry.message}</p>}
       </div>
 
       {/* Submit Button */}
