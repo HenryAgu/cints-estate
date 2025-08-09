@@ -16,7 +16,7 @@ const OutdoorOasis = ({ apartment }: ApartmentResponse) => {
       >
         Outdoor Oasis
       </p>
-      <p className="text-[#121212] font-normal text-base lg:text-lg leading-[160%]">
+      <p className="text-[#121212] font-normal text-base lg:text-lg leading-[160%] capitalize">
         {apartment?.outdoorOasis ?? "Ask Agent"}
       </p>
     </div>

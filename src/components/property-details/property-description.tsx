@@ -23,11 +23,11 @@ const PropertyDescription = ({ apartment }: ApartmentResponse) => {
       >
         Property Description
       </p>
-      <p className="text-[#121212] font-normal text-base lg:text-lg leading-[160%]">
+      <p className="text-[#121212] font-normal text-base lg:text-lg leading-[160%] capitalize">
         {apartment?.description ?? "N/A"}
       </p>
       <div
-        className={`${HelveticaNeue.className} grid grid-cols-2 gap-8 lg:flex justify-between w-full bg-white border border-[#E1E0E0] rounded-3xl p-5 mt-5`}
+        className={`${HelveticaNeue.className} grid grid-cols-2 gap-8 lg:flex justify-between w-full bg-white border border-[#E1E0E0] rounded-3xl p-5 mt-5 capitalize`}
       >
         {/* Council Tax */}
         <div className="flex flex-col gap-y-1.5 lg:gap-y-3">

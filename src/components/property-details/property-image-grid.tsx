@@ -45,7 +45,7 @@ const PropertyImageGrid = ({ apartment }: ApartmentResponse) => {
                 alt="camera_icon"
                 className="w-6 h-6 aspect-square"
               />
-              <span>1/7</span>
+              <span>1/{gridImages.length}</span>
             </div>
           </DialogTrigger>
           <PropertyModal apartment={apartment}/>

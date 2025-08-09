@@ -24,15 +24,15 @@ const PropertyCard = ({ item }: PropertyCardResponse) => {
         width={374}
         height={340}
         priority
-        className="w-full xl:h-[340px] lg:h-[250px] lg:aspect-[374/300] xl:aspect-[374/340] rounded-[20px]"
+        className="w-full xl:h-[340px] lg:h-[250px] lg:aspect-[374/300] xl:aspect-[374/340] rounded-[20px] object-cover"
       />
       <div className="flex flex-col gap-y-2 xl:gap-y-3 items-center">
         <span
-          className={`${HelveticaNeue.className} text-base lg:text-lg text-brand-secondary-500 font-medium`}
+          className={`${HelveticaNeue.className} text-base lg:text-lg text-brand-secondary-500 font-medium capitalize`}
         >
           {item.status ?? "N/A"}
         </span>
-        <p className="text-xl lg:text-[26px] text-black font-bold lg:leading-[140%]">
+        <p className="text-xl lg:text-[26px] text-black font-bold lg:leading-[140%] capitalize">
           {item.title ?? "N/A"}
         </p>
         <div className="flex items-center gap-x-0.5">
@@ -44,7 +44,7 @@ const PropertyCard = ({ item }: PropertyCardResponse) => {
             className="aspect-square lg:w-6 lg:h-6 w-4 h-4"
           />
           <p
-            className={`${HelveticaNeue.className} text-brand-neutral-300 text-base lg:text-lg font-normal lg:leading-[140%]`}
+            className={`${HelveticaNeue.className} capitalize text-brand-neutral-300 text-base lg:text-lg font-normal lg:leading-[140%]`}
           >
             {item.location ?? "N/A"}
           </p>

@@ -37,14 +37,14 @@ const KeyFeatures = ({ apartment }: ApartmentResponse) => {
         <ul className="flex flex-col gap-y-1 lg:gap-y-2 mt-2.5 lg:mt-5 list-disc ml-5">
           {leftFeatures.map((item, index) => (
             <li
-              className="text-[#121212] font-normal text-base lg:text-lg leading-[160%]"
+              className="text-[#121212] font-normal text-base lg:text-lg leading-[160%] capitalize"
               key={index}
             >
               {item}
             </li>
           ))}
         </ul>
-        <ul className="flex flex-col gap-y-1 lg:gap-y-2 mt-2.5 lg:mt-5 list-disc ml-5">
+        <ul className="flex flex-col gap-y-1 lg:gap-y-2 mt-2.5 lg:mt-5 list-disc ml-5 capitalize">
           {rightFeatures.map((item, index) => (
             <li
               className="text-[#121212] font-normal text-base lg:text-lg leading-[160%]"

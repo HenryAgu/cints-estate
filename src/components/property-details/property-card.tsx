@@ -63,7 +63,7 @@ const PropertyCard = ({ apartment }: ApartmentResponse) => {
             className="aspect-square"
           />
         </div>
-        <p className="text-[#414141] font-normal text-base lg:text-lg leading-[140%]">
+        <p className="text-[#414141] font-normal text-base lg:text-lg leading-[140%] capitalize">
           {apartment?.tenure ?? "Ask Agent"}
         </p>
       </div>

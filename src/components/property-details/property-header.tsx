@@ -21,17 +21,17 @@ const PropertyHeader = ({ apartment }: ApartmentResponse) => {
           className="aspect-square"
         />
         <span
-          className={`${HelveticaNeue.className} text-[#606060] text-lg lg:text-[23px]`}
+          className={`${HelveticaNeue.className} text-[#606060] text-lg lg:text-[23px] capitalize`}
         >
           {apartment?.location ?? "N/A"}
         </span>
       </div>
-      <p className="text-black font-bold text-3xl lg:text-[40px] leading-[130%]">
+      <p className="text-black font-bold text-3xl lg:text-[40px] leading-[130%] capitalize" >
         {apartment?.title ?? "N/A"}
       </p>
       {/* Description */}
       <p
-        className={`${HelveticaNeue.className} max-w-full lg:max-w-[630px] text-lg lg:text-xl font-light leading-[140%]`}
+        className={`${HelveticaNeue.className} max-w-full lg:max-w-[630px] text-lg lg:text-xl font-light leading-[140%] capitalize`}
       >
         {apartment?.subtitle ?? "N/A"}
       </p>
