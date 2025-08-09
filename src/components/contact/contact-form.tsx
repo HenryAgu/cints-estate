@@ -40,7 +40,7 @@ const ContactForm = () => {
   const onSubmit = async (data: ContactFormData) => {
     try {
       const response = await fetch(
-        `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`,
+        `https://formspree.io/f/${process.env.NEXT_PUBLIC_CONTACT_FORMSPREE_ID}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

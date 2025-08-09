@@ -37,10 +37,27 @@ const RequestForm = () => {
     resolver: zodResolver(requestFormSchema),
   });
 
-  const onSubmit = (data: RequestFormData) => {
-    console.log("Submitted Data:", data);
-	toast.success("Your request has been submitted successfully!");
-    reset();
+  const onSubmit = async (data: RequestFormData) => {
+    try {
+      const response = await fetch(
+        `https://formspree.io/f/${process.env.NEXT_PUBLIC_REQUEST_FORMSPREE_ID}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (response.ok) {
+        toast.success("Your request has been sent!");
+        reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast.error("Something went wrong. Please try again later.");
+    }
   };
   return (
     <form
@@ -156,7 +173,7 @@ const RequestForm = () => {
       <Button
         className={`${HelveticaNeue.className} p-5 mt-2.5 cursor-pointer w-full lg:w-fit bg-brand-secondary-500 rounded-[60px] font-medium text-lg leading-[140%]`}
       >
-        Make Request
+        {isSubmitting ? "Sending..." : " Make Request"}
       </Button>
     </form>
   );
