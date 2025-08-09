@@ -14,12 +14,12 @@ const PropertyModal = ({ apartment }: ApartmentResponse) => {
     <DialogContent className="w-full mx-auto max-w-full [@media(min-width:1920px)]:max-w-[1440px] p-4 lg:p-0">
       <DialogTitle className="flex items-center justify-between">
         <div className="flex flex-col gap-y-3.5">
-          <p className="font-didot text-white font-bold text-[28px] leading-[130%]">
-            The Ashford Haven
+          <p className="font-didot text-white font-bold text-[28px] leading-[130%] capitalize">
+            {apartment?.title ?? "---"}
           </p>
-          <div className="flex items-center gap-x-2.5">
+          <div className="flex items-center gap-x-2.5 capitalize">
             <span className={`${HelveticaNeue.className} text-white`}>
-              Surrey Hills, Surrey
+              {apartment?.location ?? "---"}
             </span>
           </div>
         </div>
@@ -33,7 +33,7 @@ const PropertyModal = ({ apartment }: ApartmentResponse) => {
           />
         </DialogClose>
       </DialogTitle>
-      <PropertiesCarousel apartment={apartment}/>
+      <PropertiesCarousel apartment={apartment} />
     </DialogContent>
   );
 };
