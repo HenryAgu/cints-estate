@@ -15,7 +15,7 @@ const PropertiesCarousel = ({ apartment }: ApartmentResponse) => {
       <CarouselContent>
         {apartment?.images.map((image, index) => (
           <CarouselItem key={index} className="my-10 ">
-            <div className="flex items-center justify-center rounded-xl">
+            <div className="flex items-center justify-center">
               <Image
                 src={image?.asset?.url ?? "/images/background2.png"}
                 alt={`image ${index + 1}`}
@@ -23,7 +23,7 @@ const PropertiesCarousel = ({ apartment }: ApartmentResponse) => {
                 height={704}
                 className="
     w-full lg:h-auto h-[250px] 
-     object-contain"
+     object-contain  rounded-xl"
               />
             </div>
           </CarouselItem>
