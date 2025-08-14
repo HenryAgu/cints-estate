@@ -2,17 +2,17 @@ import Image from "next/image";
 import React from "react";
 
 const gridImages: { src: string; alt: string }[] = [
-	{ src: "/images/grid2.png", alt: "grid2" },
-	{ src: "/images/grid3.png", alt: "grid3" },
-	{ src: "/images/grid4.png", alt: "grid4" },
-	{ src: "/images/grid5.png", alt: "grid5" },
+	{ src: "/images/grid2.webp", alt: "grid2" },
+	{ src: "/images/grid3.webp", alt: "grid3" },
+	{ src: "/images/grid4.webp", alt: "grid4" },
+	{ src: "/images/grid5.webp", alt: "grid5" },
 ];
 const ImageGrid = () => {
 	return (
 		<section className="lg:my-18 my-12 md:mt-5 mx-4 lg:mx-20 flex md:flex-row flex-col gap-4 lg:gap-5 h-full">
 			<div className="w-full basis-[48%]">
 				<Image
-					src="/images/grid1.png"
+					src="/images/grid1.webp"
 					alt="grid-image"
 					width={630}
 					height={592}

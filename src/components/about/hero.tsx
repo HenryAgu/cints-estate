@@ -13,7 +13,7 @@ interface HeroProps {
 
 const Hero = ({ title, subtitle }: HeroProps) => {
 	return (
-		<section className="relative bg-[url(/images/background.png)] bg-no-repeat bg-cover  w-full mx-auto">
+		<section className="relative bg-[url(/images/background.webp)] bg-no-repeat bg-cover  w-full mx-auto">
 			<div className="absolute inset-0 bg-black/75"></div>
 			<div className="relative z-10 min-h-[300px] lg:min-h-[443px] flex flex-col">
 				<Navbar />

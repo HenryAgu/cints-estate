@@ -8,7 +8,7 @@ const HelveticaNeue = localFont({
 
 function Hero() {
 	return (
-		<div className="relative bg-[url(/images/background.png)] bg-no-repeat bg-cover  w-full mx-auto">
+		<div className="relative bg-[url(/images/background.webp)] bg-no-repeat bg-cover  w-full mx-auto">
 			<div className="absolute inset-0 bg-black/75"></div>
 			<div className="relative z-10 min-h-[850px] md:min-h-[550px] lg:min-h-[824px] flex flex-col">
 				<Navbar color="#988261" />

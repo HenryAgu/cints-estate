@@ -17,7 +17,7 @@ const PropertiesCarousel = ({ apartment }: ApartmentResponse) => {
           <CarouselItem key={index} className="my-10 ">
             <div className="flex items-center justify-center">
               <Image
-                src={image?.asset?.url ?? "/images/background2.png"}
+                src={image?.asset?.url ?? "/images/background.webp"}
                 alt={`image ${index + 1}`}
                 width={949}
                 height={704}

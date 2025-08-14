@@ -8,7 +8,7 @@ const HelveticaNeue = localFont({
 
 const KeyService = () => {
 	return (
-		<section className="relative bg-[url(/images/key-service.png)] bg-no-repeat bg-cover max-h-full lg:max-h-[597px]  w-full mx-auto">
+		<section className="relative bg-[url(/images/key-service.webp)] bg-no-repeat bg-cover max-h-full lg:max-h-[597px]  w-full mx-auto">
 			<div className="absolute inset-0 bg-black/75"></div>
 			<div className="relative z-10 p-10 md:p-20 flex flex-col items-center">
 				<div className="text-white text-center flex flex-col gap-y-4">
