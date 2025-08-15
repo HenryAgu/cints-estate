@@ -152,7 +152,7 @@ const Footer = () => {
 					<p
 						className={`text-white text-base lg:text-lg font-normal ${HelveticaNeue.className}`}
 					>
-						© 2025, Cints Estate All Rights Reserved.
+						© {new Date().getFullYear()}, Cints Estate All Rights Reserved.
 					</p>
 					<div className="flex items-center gap-x-6">
 						{socials.map((item, index) => (
