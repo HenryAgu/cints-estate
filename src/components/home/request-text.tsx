@@ -41,7 +41,7 @@ const RequestText = () => {
 						</p>
 					</div>
 				</div>
-				<div className="flex flex-col gap-y-3 lg:gap-y-6">
+				{/* <div className="flex flex-col gap-y-3 lg:gap-y-6">
 					<Image
 						src="/icons/chat.svg"
 						alt="chat_icon"
@@ -61,7 +61,7 @@ const RequestText = () => {
 							+234 501-801 9595
 						</p>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
