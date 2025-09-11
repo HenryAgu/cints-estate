@@ -20,7 +20,7 @@ const RequestText = () => {
 				life and goals.
 			</p>
 			<div className="flex justify-between lg:justify-start gap-x-10 mt-10">
-				<div className="flex flex-col gap-y-3 lg:gap-y-6">
+				{/* <div className="flex flex-col gap-y-3 lg:gap-y-6">
 					<Image
 						src="/icons/chat.svg"
 						alt="chat_icon"
@@ -40,7 +40,7 @@ const RequestText = () => {
 							Contact@cintsestate.com
 						</p>
 					</div>
-				</div>
+				</div> */}
 				{/* <div className="flex flex-col gap-y-3 lg:gap-y-6">
 					<Image
 						src="/icons/chat.svg"

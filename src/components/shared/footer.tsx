@@ -71,7 +71,7 @@ const Footer = () => {
             className={`flex md:flex-row flex-col md:gap-x-10 lg:gap-x-20 xl:gap-x-28 2xl:gap-x-24.5 gap-y-14 ${HelveticaNeue.className}`}
           >
             {/* Contact */}
-            <div className="flex flex-col gap-y-3 lg:gap-y-4">
+            {/* <div className="flex flex-col gap-y-3 lg:gap-y-4">
               <p className="text-white font-semibold text-lg lg:text-xl">
                 Reach out
               </p>
@@ -83,7 +83,7 @@ const Footer = () => {
                   Contact@cintsestate.com
                 </Link>
               </div>
-            </div>
+            </div> */}
 
             {/* Main */}
             <div className="flex flex-col gap-y-3 lg:gap-y-4">
