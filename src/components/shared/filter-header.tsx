@@ -16,7 +16,7 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import {
 	ApartmentType,
   fetchApartmentType,
@@ -50,7 +50,6 @@ const filterNav: FilterNav[] = [
 
 const FilterHeader = () => {
   const pathname = usePathname();
-  const queryClient = useQueryClient();
 
   const [address, setAddress] = useState("");
   const [noOfBedrooms, setNoOfBedrooms] = useState<number | "">("");
@@ -59,8 +58,6 @@ const FilterHeader = () => {
   // Fetch apartment types once
   const {
     data: apartmentTypes = [],
-    isLoading: loadingTypes,
-    error: typeError,
   } = useQuery({
     queryKey: ["apartmentTypes"],
     queryFn: fetchApartmentType,
@@ -176,7 +173,7 @@ const FilterHeader = () => {
         <div className="mt-4">
           <h2 className="font-semibold mb-2">Search Results:</h2>
           <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-5 lg:gap-y-10 mt-14">
-            {searchResults.map((item: ApartmentType, i: number) => (
+            {searchResults.map((item: ApartmentType) => (
               <PropertyCard item={item} key={item.slug.current} />
             ))}
           </div>

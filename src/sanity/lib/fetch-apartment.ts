@@ -196,3 +196,13 @@ export const fetchApartmentBySlug = async (
 
   return await client.fetch(query, { slug });
 };
+
+export const fetchAllApartmentSlugs = async (): Promise<string[]> => {
+  const query = `*[_type == "apartment" && defined(slug.current)]{
+    "slug": slug.current
+  }`;
+
+  const slugs: { slug: string }[] = await client.fetch(query);
+
+  return slugs.map((item) => item.slug); // ✅ returns string[]
+};

@@ -1,4 +1,3 @@
-import { Mail, MapPin } from "lucide-react";
 import localFont from "next/font/local";
 import TermsLayout from "./terms-layout";
 

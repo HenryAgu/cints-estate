@@ -2,8 +2,6 @@ import Image from "next/image";
 import React from "react";
 import {
   Dialog,
-  DialogContent,
-  DialogTitle,
   DialogTrigger,
 } from "../ui/dialog";
 import PropertyModal from "../property-modal";

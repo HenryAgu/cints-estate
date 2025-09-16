@@ -1,5 +1,4 @@
 import localFont from "next/font/local";
-import Image from "next/image";
 import React from "react";
 
 const HelveticaNeue = localFont({

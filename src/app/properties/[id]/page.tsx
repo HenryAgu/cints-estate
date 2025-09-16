@@ -1,48 +1,31 @@
-"use client";
 import PropertyDetailsText from "@/components/property-details/property-details-text";
 import PropertyImageGrid from "@/components/property-details/property-image-grid";
 import RecentListing from "@/components/property-details/recent-listing";
-import { fetchApartmentBySlug } from "@/sanity/lib/fetch-apartment";
-import { useQuery } from "@tanstack/react-query";
-import { notFound, useParams } from "next/navigation";
-import Head from "next/head";
-import React from "react";
-import PropetiesDetailsSkeleton from "@/components/property-details/propeties-details-skeleton";
+import { fetchApartmentBySlug, fetchAllApartmentSlugs } from "@/sanity/lib/fetch-apartment";
+import { notFound } from "next/navigation";
 
-const PropertyDetailsPage = () => {
-  const { id } = useParams<{ id: string }>();
+export async function generateStaticParams() {
+  const slugs = await fetchAllApartmentSlugs();
 
-  const {
-    data: apartment,
-    isLoading,
-    error,
-  } = useQuery({
-    queryKey: ["apartments", id],
-    queryFn: () => fetchApartmentBySlug(id as string),
-    enabled: !!id,
-  });
+  return slugs.map((slug: string) => ({
+    id: slug,
+  }));
+}
 
-  if (isLoading) return <PropetiesDetailsSkeleton />;
-  if (error) return notFound();
+export default async function PropertyDetailsPage(
+  props: { params: Promise<{ id: string }> }
+) {
+  const params = await props.params;
+
+  const apartment = await fetchApartmentBySlug(params.id);
+
   if (!apartment) return notFound();
 
   return (
-    <>
-      <Head>
-        <title>{apartment.title} | Cints estate</title>
-        <meta
-          name="description"
-          content={apartment.subtitle ?? "Apartment details"}
-        />
-      </Head>
-
-      <main className="min-h-screen w-full font-didot mb-12 lg:mb-24">
-        <PropertyImageGrid apartment={apartment} />
-        <PropertyDetailsText apartment={apartment} />
-        <RecentListing />
-      </main>
-    </>
+    <main className="min-h-screen w-full font-didot mb-12 lg:mb-24">
+      <PropertyImageGrid apartment={apartment} />
+      <PropertyDetailsText apartment={apartment} />
+      <RecentListing />
+    </main>
   );
-};
-
-export default PropertyDetailsPage;
+}

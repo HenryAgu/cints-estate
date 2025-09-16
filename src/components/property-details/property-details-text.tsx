@@ -2,7 +2,6 @@ import React from "react";
 import ContactCard from "./contact-card";
 import Location from "../shared/location";
 import PropertyInfo from "./property-info";
-import { ApartmentType } from "@/sanity/lib/fetch-apartment";
 import { ApartmentResponse } from "../type";
 
 const PropertyDetailsText = ({ apartment }: ApartmentResponse) => {
